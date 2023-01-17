@@ -1,16 +1,10 @@
-import { Head } from "$fresh/runtime.ts";
-import { BasicTemplate } from "../components/templates/BasicTemplate.tsx";
-import MyProfile from "../islands/MyProfile.tsx";
-
+import { MyProfile } from '../components/molecules/User/MyProfile.tsx';
+import { BasicTemplate } from '../components/Template/BasicTemplate.tsx';
+import { ProfileTemplate } from '../components/Template/ProfileTemplate.tsx';
 export default function Home() {
   return (
-    <>
-      <Head>
-        <title>miso.dev</title>
-      </Head>
-      <BasicTemplate>
-        <MyProfile />
-      </BasicTemplate>
-    </>
+    <ProfileTemplate>
+      <MyProfile />
+    </ProfileTemplate>
   );
 }

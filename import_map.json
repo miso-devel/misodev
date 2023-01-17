@@ -9,6 +9,7 @@
     "twind": "https://esm.sh/twind@0.16.17",
     "twind/": "https://esm.sh/twind@0.16.17/",
     "dotenv/": "https://deno.land/std@0.172.0/dotenv/",
-    "microcms": "https://esm.sh/microcms-js-sdk@2.0.0"
+    "microcms": "https://esm.sh/microcms-js-sdk@2.0.0",
+    "dompurify": "https://esm.sh/dompurify@2.3.8"
   }
 }

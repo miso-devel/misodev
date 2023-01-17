@@ -1,6 +1,4 @@
-import { microcmsClient } from "../lib/microCMSClient.ts";
-
-export default function MyProfile() {
+export const MyProfile = () => {
   return (
     <div class="bg-white shadow(2xl) m-auto w-5/6  md:w-2/5  md:h-2/3 p-5 rounded-md">
       <div class="flex justify-start items-center gap-2 border-b-2 py-2">
@@ -17,4 +15,4 @@ export default function MyProfile() {
       </div>
     </div>
   );
-}
+};
