@@ -1,4 +1,3 @@
-import { Head } from '$fresh/runtime.ts';
 import { Handlers, PageProps } from '$fresh/server.ts';
 import { TypoWrapper } from '../../components/atom/TypoWrapper.tsx';
 import { Articles } from '../../components/molecules/Article/Articles.tsx';
@@ -24,13 +23,8 @@ export default function ArticlesPage({
     return <TypoWrapper element="h1">記事が取得できませんでした</TypoWrapper>;
   }
   return (
-    <>
-      <Head>
-        <title>miso's Article</title>
-      </Head>
-      <ArticleTemplate>
-        <Articles articles={articles} />
-      </ArticleTemplate>
-    </>
+    <ArticleTemplate>
+      <Articles articles={articles} />
+    </ArticleTemplate>
   );
 }

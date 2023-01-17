@@ -11,7 +11,7 @@ export default function ArticleTemplate({ children }: TProps) {
       <TypoWrapper element="h1" className="text-center my-10">
         Articles
       </TypoWrapper>
-      <div class="grid grid-cols-1 gap-10 md:grid-cols-4 lg:grid-cols-6 mx-5 break-all">
+      <div class="grid grid-cols-1 gap-10 md:grid-cols-3 lg:grid-cols-5 mx-5 break-all">
         {children}
       </div>
     </BasicTemplate>

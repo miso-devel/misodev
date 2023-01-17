@@ -1,13 +1,18 @@
 import { TypoWrapper } from '../../atom/TypoWrapper.tsx';
 type TProps = {
+  id: string;
   title: string;
-  content: string;
+  date: string;
 };
-export const Article = ({ title, content }: TProps) => {
+export const Article = ({ id, title, date }: TProps) => {
   return (
-    <div class="bg-white p-8 rounded-md">
-      <TypoWrapper element="h2" children={title} className="my-3 h-32" />
-      <TypoWrapper element="p" children={content} />
-    </div>
+    <a class="bg-white p-5 rounded-md" href={`articles/${id}`}>
+      <TypoWrapper
+        element="h2"
+        children={title}
+        className="my-3 h-24 overflow-y-scroll"
+      />
+      <TypoWrapper element="p" className="pt-5" children={date.split('T')[0]} />
+    </a>
   );
 };
