@@ -13,10 +13,12 @@ export default function ArticleContent({ title, content }: TProps) {
   }, []);
 
   return (
-    <div class="w-11/12 md:w-4/5 m-auto">
-      <TypoWrapper element="h1" className="my-5 border-b-2 text-center">
-        {title}
-      </TypoWrapper>
+    <div class="w-11/12 md:w-4/5 m-auto py-5">
+      <TypoWrapper
+        element="h1"
+        className="py-10 border-b-2 text-center"
+        children={title}
+      />
       <div class="bg-white p-5 md:p-10 rounded-md">
         <div dangerouslySetInnerHTML={{ __html: sanitized }} id="contents" />
         <LinkTo href="/articles">記事一覧へ</LinkTo>
