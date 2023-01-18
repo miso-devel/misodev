@@ -21,7 +21,9 @@ export default function ArticleContent({ title, content }: TProps) {
       />
       <div class="bg-white p-5 md:p-10 rounded-md">
         <div dangerouslySetInnerHTML={{ __html: sanitized }} id="contents" />
-        <LinkTo href="/articles">記事一覧へ</LinkTo>
+        <div class="text-center">
+          <LinkTo href="/articles">記事一覧へ</LinkTo>
+        </div>
       </div>
     </div>
   );

@@ -12,6 +12,7 @@ export const Articles = ({ articles }: TProps) => {
             id={article.id}
             title={article.title}
             date={article.updatedAt}
+            categories={article.category}
           />
         );
       })}

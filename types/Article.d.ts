@@ -3,8 +3,9 @@ export type TArticle = {
   updatedAt: string;
   title: string;
   content: string;
-  category: {
-    id: string;
-    name: string;
-  };
+  category: TCategory[];
+};
+export type TCategory = {
+  id: string;
+  name: string;
 };
