@@ -2,7 +2,7 @@ import { Handlers, PageProps } from '$fresh/server.ts';
 import { TypoWrapper } from '../../components/atom/TypoWrapper.tsx';
 import { Articles } from '../../components/molecules/Article/Articles.tsx';
 import ArticleTemplate from '../../components/Template/ArticleTemplate.tsx';
-import { microcmsClient } from '../../lib/microcmsClient.ts';
+import { microcmsClient } from '../../lib/microCMSClient.ts';
 import { type TArticle } from '../../types/Article.d.ts';
 export const handler: Handlers<TArticle[]> = {
   async GET(_, ctx) {
