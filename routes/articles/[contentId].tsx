@@ -1,6 +1,6 @@
 import { Handlers, PageProps } from '$fresh/server.ts';
 import { TypoWrapper } from '../../components/atom/TypoWrapper.tsx';
-import { microcmsClient } from '../../lib/microCMSClient.ts';
+import { microcmsClient } from '../../lib/microcmsClient.ts';
 import { Head } from '$fresh/runtime.ts';
 import { type TArticle } from '../../types/Article.d.ts';
 import { BasicTemplate } from '../../components/Template/BasicTemplate.tsx';
