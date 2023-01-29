@@ -3,9 +3,6 @@ on:
   push:
     branches:
       - main
-env:
-  MICROCMS_API_KEY: ${{ secrets.MICROCMS_API_KEY }}
-  HELLO: hello!!!!!!!!!!
 
 jobs:
   build:
@@ -32,7 +29,7 @@ jobs:
 
       - name: データ書き込み
         run: |
-          deno run --allow-read --allow-write --allow-env --allow-net ./tasks/create_microcms_data.ts ${{ vars.MICROCMS_API_KEY }}
+          deno run --allow-read --allow-write --allow-env --allow-net ./tasks/create_microcms_data.ts ${{ secrets.MICROCMS_API_KEY }}
 
       - name: git add
         run: |
