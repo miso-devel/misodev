@@ -29,8 +29,8 @@ jobs:
           git commit -m "Add data.json file"
           git push -u origin add-json-data
           ls
-          git branch -a
+          git branch
           git checkout main
-          git pull origin add-json-file
+          git merge add-json-file
           git push
           git push origin --delete add-json-file
