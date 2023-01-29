@@ -5,7 +5,7 @@ on:
       - main
 
 jobs:
-  build:
+  deployment:
     runs-on: ubuntu-latest
 
     steps:
@@ -29,7 +29,6 @@ jobs:
 
       - name: データ書き込み
         run: |
-          echo "${{ secrets.SAMPLE }}"
           deno run --allow-read --allow-write --allow-env --allow-net ./tasks/create_microcms_data.ts ${{ secrets.MICROCMS_API_KEY }}
 
       - name: git add
