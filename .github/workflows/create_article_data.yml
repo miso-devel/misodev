@@ -20,7 +20,7 @@ jobs:
           git checkout -b add-json-data
 
       - name: Add data.json file
-        run: echo "aaa" > data.json
+        run: echo "これはデータ" > data.json
 
       - name: branch切り替えからマージまで
         run: |
