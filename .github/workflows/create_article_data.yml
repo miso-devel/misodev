@@ -4,6 +4,8 @@ on:
     branches:
       - main
 
+permissions: read-all|write-all
+
 env:
   MICROCMS_API_KEY: ${{ secrets.MICROCMS_API_KEY }}
   SAMPLE: ${{ secrets.SAMPLE }}
