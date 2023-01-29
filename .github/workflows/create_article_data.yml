@@ -13,37 +13,28 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v2
 
-      - name: Create new feature branch
+      - name: ブランチ作成
         run: |
           git branch -a
           git checkout main
           git checkout -b add-json-data
 
-      - name: Add data.json file
+      - name: データ作成
         run: echo "これはデータ" > data.json
 
-      - name: branch切り替えからマージまで
+      - name: データ変更
         run: |
           git config --local user.email "github-actions[bot]@users.noreply.github.com"
           git config --local user.name "github-actions[bot]"
           git add .
           git commit -m "Add data.json file"
           git push -u origin add-json-data
-          echo "branch確認"
-          git branch -a
+      - name: マージ
+        run: |
           git checkout main
-          echo "チェックアウト!"
-          git branch
-          echo "マージ前"
           git merge add-json-data
-          echo "マージ後"
-          echo "pull前"
           git pull origin main
-          echo "add前（いったんなし）"
-          echo "status確認前"
-          git status
-          echo "pull前"
-          git pull origin main
-          echo "push前"
           git push
-          git push origin --delete add-json-file
+      - name: ブランチ削除
+        run: |
+          git push origin --delete add-json-data
