@@ -6,6 +6,4 @@ jobs:
     steps:
       - run: |
           echo $(pwd)
-          cd tasks || exit
-          echo $(pwd)
           echo "owari!!"
