@@ -6,14 +6,13 @@ export const microcmsClient = createClient({
   serviceDomain: 'misodev',
   apiKey: `${Deno.args[0]}`,
 });
-console.log(join);
-console.log(ensureDirSync);
+
 const articles = await microcmsClient
   .get({ endpoint: 'articles' })
   .then((res) => {
     return res.contents;
   });
-
+console.log(articles);
 const data2 = {
   message: 'data5s',
 };
