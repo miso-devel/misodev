@@ -14,7 +14,7 @@ const articles = await microcmsClient
   });
 
 const data2 = {
-  message: 'data2',
+  message: 'data5s',
 };
 const outputPath = '../static/json';
 ensureDirSync(outputPath);
