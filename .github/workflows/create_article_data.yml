@@ -29,7 +29,8 @@ jobs:
           git add .
           git commit -m "Add data.json file"
           git push -u origin add-json-data
-          git branch
+          echo "branch確認"
+          git branch -a
           git checkout main
           echo "チェックアウト!"
           git branch
