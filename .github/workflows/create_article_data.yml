@@ -5,5 +5,5 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - run: |
-          echo $(pwd)
+          echo $(ls)
           echo "owari!!"
