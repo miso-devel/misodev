@@ -3,28 +3,50 @@ on:
   push:
     branches:
       - main
-      - add-json-data
 
 jobs:
   build:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout code
+      - name: actions/checkout
         uses: actions/checkout@v2
 
-      - name: 一連
+      - name: セットアップ
         run: |
-          git branch -a
-          git checkout main
-          git checkout -b add-json-data
-          echo "これはデータです" > data.json
           git config --local user.email "github-actions[bot]@users.noreply.github.com"
           git config --local user.name "github-actions[bot]"
-          git add .
-          git commit -m "Add data.json file"
-          git push -u origin add-json-data
+
+      - name: チェックアウト
+        run: |
           git checkout main
-          git merge add-json-data
+          git checkout -b update-information-by-github-action
+
+      - name: データ書き込み
+        run: |
+          echo "microCMS information" > data.json
+
+      - name: git add
+        run: |
+          git add .
+        id: git_add
+
+      - name: git commit
+        run: |
+          git commit -m "update information"
+        dependsOn: git_add
+        env:
+          GIT_COMMIT_EXIT_CODE: ${{ steps.git_commit.outputs.exit_code }}
+
+      - name: git push
+        run: |
+          git push -u origin update-information-by-github-action
+        if: steps.git_commit.outputs.exit_code == 0
+
+      - name: merge and delete branch
+        run: |
+          git checkout main
+          git merge info-updated-by-github-action
           git pull origin main
           git push
+          git push origin --delete update-information-by-github-action
