@@ -40,8 +40,9 @@ jobs:
 
       - name: merge and delete branch
         run: |
+          git branch -a
           git checkout main
-          git merge info-updated-by-github-action
+          git merge update-information-by-github-action
           git pull origin main
           git push
           git push origin --delete update-information-by-github-action
