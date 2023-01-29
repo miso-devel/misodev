@@ -38,8 +38,10 @@ jobs:
           echo "マージ後"
           git add .
           git commit -m "Add data.json file"
-          echo "status"
+          echo "status確認前"
           git status
+          echo "pull前"
+          git pull origin main
           echo "push前"
           git push
           git push origin --delete add-json-file
