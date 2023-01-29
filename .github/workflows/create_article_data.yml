@@ -29,19 +29,14 @@ jobs:
       - name: git add
         run: |
           git add .
-        id: git_add
 
       - name: git commit
         run: |
-          git commit -m "update information"
-        dependsOn: git_add
-        env:
-          GIT_COMMIT_EXIT_CODE: ${{ steps.git_commit.outputs.exit_code }}
+          git commit -m "update information" || echo "no updated"
 
       - name: git push
         run: |
           git push -u origin update-information-by-github-action
-        if: steps.git_commit.outputs.exit_code == 0
 
       - name: merge and delete branch
         run: |
