@@ -37,6 +37,8 @@ jobs:
           deno run -A ./tasks/create_microcms_data.ts $MICROCMS_API_KEY
           cat ./static/json/careers.json
           cat ./static/json/articles.json
+          ls
+          cd ./static && ls
 
       - name: git add
         run: |
