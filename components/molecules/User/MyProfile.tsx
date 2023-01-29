@@ -24,7 +24,7 @@ export const MyProfile = () => {
       </div>
       <div class="my-5 ml-2">
         <p>現在大学3年生。主にフロントエンド。</p>
-        <p>たこ焼き,ラーメン,Apexが好き</p>
+        <p>ラーメン,Apexが好き</p>
       </div>
       <div class="flex flex-wrap">
         {skills.map((skill) => {
