@@ -12,7 +12,6 @@ const articles = await microcmsClient
   .then((res) => {
     return res.contents;
   });
-console.log(articles);
 const data2 = {
   message: 'data5s',
 };
