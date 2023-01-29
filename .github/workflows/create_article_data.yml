@@ -34,7 +34,7 @@ jobs:
           echo "チェックアウト!"
           git branch
           echo "マージ前"
-          git merge add-json-file
+          git merge add-json-data
           echo "マージ後"
           git add data.json
           git commit -m "Add data.json file"
