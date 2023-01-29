@@ -36,7 +36,8 @@ jobs:
           echo "マージ前"
           git merge add-json-data
           echo "マージ後"
-          git add data.json
+          git add .
           git commit -m "Add data.json file"
-          git push
+          echo "push前"
+          git push origin main
           git push origin --delete add-json-file
