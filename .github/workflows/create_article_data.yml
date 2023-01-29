@@ -38,10 +38,7 @@ jobs:
           echo "マージ後"
           echo "pull前"
           git pull origin main
-          echo "add前"
-          git push
-          git add .
-          git commit -m "Add data.json file"
+          echo "add前（いったんなし）"
           echo "status確認前"
           git status
           echo "pull前"
