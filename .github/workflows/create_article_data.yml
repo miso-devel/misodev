@@ -30,9 +30,6 @@ jobs:
           git push -u origin add-json-data
           ls
           git branch -a
-
-      - name: Commit data.json file
-        run: |
           git checkout main
           git pull origin add-json-file
           git push
