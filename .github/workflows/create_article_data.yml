@@ -2,7 +2,7 @@ name: CI/CD pipeline
 on:
   push:
     branches:
-      - develop
+      - main
       - feature/*
 
 jobs:
@@ -15,7 +15,7 @@ jobs:
 
       - name: Create new feature branch
         run: |
-          git checkout develop
+          git checkout main
           git checkout -b feature/add-json-file
 
       - name: Add data.json file
@@ -45,13 +45,13 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v2
 
-      - name: Merge feature branch into develop
+      - name: Merge feature branch into main
         run: |
-          git checkout develop
+          git checkout main
           git merge --no-ff feature/add-json-file
 
       - name: Push changes
         uses: ad-m/github-push-action@master
         with:
-          branch: develop
+          branch: main
           force: true
