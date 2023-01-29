@@ -50,7 +50,8 @@ jobs:
       - name: Merge feature branch into main
         run: |
           git pull
-          git merge --no-ff feature/add-json-file
+          git branch
+          git merge feature/add-json-file
 
       - name: Push changes
         uses: ad-m/github-push-action@master
