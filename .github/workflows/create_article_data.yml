@@ -15,9 +15,9 @@ jobs:
         uses: actions/checkout@v2
 
       - name: Setup/deno
-        uses: actions/setup-deno@v1
+        uses: denoland/setup-deno@v1
         with:
-          deno-version: latest
+          deno-version: v1.x
 
       - name: セットアップ
         run: |
