@@ -38,7 +38,7 @@ jobs:
           cat ./static/json/careers.json
           cat ./static/json/articles.json
           ls
-          cd ./static && ls
+          cd ./static/json && ls
 
       - name: git add
         run: |
@@ -47,6 +47,8 @@ jobs:
       - name: git commit
         run: |
           git commit -m "update information" || echo "no updated"
+          cat ./static/json/careers.json
+          cat ./static/json/articles.json
 
       - name: git push
         run: |
