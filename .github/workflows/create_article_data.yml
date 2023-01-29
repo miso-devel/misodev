@@ -4,4 +4,8 @@ jobs:
   check-bats-version:
     runs-on: ubuntu-latest
     steps:
-      - run: 'cd ./tasks && deno run --allow-read --allow-write create_json.ts echo "create json!!"'
+      - run: |
+          ls
+          cd tasks
+          ls
+          echo "owari!!"
