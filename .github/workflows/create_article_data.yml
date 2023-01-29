@@ -55,7 +55,7 @@ jobs:
           git branch
           git branch -a
           git merge origin/add-json-data
-          git push origin --delete feature/add-json-file
+          git push origin --delete add-json-file
 
       - name: Push changes
         uses: ad-m/github-push-action@master
