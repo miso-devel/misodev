@@ -23,6 +23,7 @@ jobs:
 
       - name: Commit data.json file
         run: |
+          ls
           git config --local user.email "github-actions[bot]@users.noreply.github.com"
           git config --local user.name "github-actions[bot]"
           git add .
@@ -38,6 +39,7 @@ jobs:
           echo "pull前"
           git pull origin main
           echo "add前"
+          git push
           git add .
           git commit -m "Add data.json file"
           echo "status確認前"
