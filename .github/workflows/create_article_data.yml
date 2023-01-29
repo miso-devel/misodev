@@ -32,5 +32,7 @@ jobs:
           git branch
           git checkout main
           git merge add-json-file
+          git add data.json
+          git commit -m "Add data.json file"
           git push
           git push origin --delete add-json-file
