@@ -54,7 +54,7 @@ jobs:
           git pull
           git branch
           git branch -a
-          git merge add-json-data
+          git merge origin/add-json-data
           git push origin --delete feature/add-json-file
 
       - name: Push changes
