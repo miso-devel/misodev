@@ -6,7 +6,8 @@ export const microcmsClient = createClient({
   serviceDomain: 'misodev',
   apiKey: `${Deno.args[0]}`,
 });
-
+console.log(join);
+console.log(ensureDirSync);
 const articles = await microcmsClient
   .get({ endpoint: 'articles' })
   .then((res) => {
@@ -16,7 +17,7 @@ const articles = await microcmsClient
 const data2 = {
   message: 'data5s',
 };
-const outputPath = '../static/json';
+const outputPath = '../static/json/';
 ensureDirSync(outputPath);
 const articlesPath = join(outputPath, 'articles.json');
 const careersPath = join(outputPath, 'careers.json');
