@@ -13,7 +13,7 @@ const articles = await microcmsClient
     return res.contents;
   });
 const data2 = {
-  message: 'data5sあああ',
+  message: 'data5sあああgggg',
 };
 const outputPath = './static/json/';
 ensureDirSync(outputPath);

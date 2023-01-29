@@ -3,6 +3,7 @@ on:
   push:
     branches:
       - main
+      - update-information-by-github-action
 
 permissions: write-all
 
