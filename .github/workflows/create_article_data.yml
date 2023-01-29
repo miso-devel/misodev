@@ -38,7 +38,7 @@ jobs:
         run: |
           git push -u origin update-information-by-github-action
 
-      - name: checkout and merge
+      - name: checkout main and merge
         run: |
           git checkout main
           git pull origin main
