@@ -30,24 +30,8 @@ jobs:
           git push -u origin add-json-data
           ls
           git branch -a
-
-  deploy:
-    runs-on: ubuntu-latest
-    needs: build
-
-    steps:
-      - name: Checkout code
-        uses: actions/checkout@v2
-
-      - name: Merge feature branch into main
-        run: |
-          git branch -a
+      - name: merge to main
+          git checkout main
           git pull origin add-json-file
           git push
           git push origin --delete add-json-file
-
-      - name: Push changes
-        uses: ad-m/github-push-action@master
-        with:
-          branch: main
-          force: true
