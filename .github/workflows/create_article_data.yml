@@ -37,10 +37,8 @@ jobs:
       - name: データ書き込み
         run: |
           deno run -A ./tasks/create_microcms_data.ts $MICROCMS_API_KEY
-          cat ./static/json/careers.json
-          cat ./static/json/articles.json
-          ls
-          cd ./static/json && ls
+          echo '{"key": "value"}' >> file.json
+          echo '{"key": "value"}' >> ./static/json/careers.json
 
       - name: git add
         run: |
