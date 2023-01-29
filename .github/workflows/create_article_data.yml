@@ -53,7 +53,7 @@ jobs:
       - name: Merge feature branch into main
         run: |
           git pull
-          git branch -a
+          git branch
           git pull origin add-json-file
           git push
           git push origin --delete add-json-file
