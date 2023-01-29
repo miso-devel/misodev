@@ -3,7 +3,7 @@ on:
   push:
     branches:
       - main
-      - feature/*
+      - add-json-data
 
 jobs:
   build:
@@ -31,7 +31,11 @@ jobs:
           ls
           git branch
           git checkout main
+          echo "チェックアウト!"
+          git branch
+          echo "マージ前"
           git merge add-json-file
+          echo "マージ後"
           git add data.json
           git commit -m "Add data.json file"
           git push
