@@ -32,8 +32,7 @@ jobs:
 
       - name: データ書き込み
         run: |
-          echo '$HELLO'
-          deno run --allow-read --allow-write --allow-env --allow-net ./tasks/create_microcms_data.ts ${{ env.MICROCMS_API_KEY }}
+          deno run --allow-read --allow-write --allow-env --allow-net ./tasks/create_microcms_data.ts ${{ vars.MICROCMS_API_KEY }}
 
       - name: git add
         run: |
