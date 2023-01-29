@@ -27,7 +27,7 @@ jobs:
           git config --local user.name "github-actions[bot]"
           git add data.json
           git commit -m "Add data.json file"
-          git push
+          git push --set-upstream origin feature/add-json-file
 
   test:
     runs-on: ubuntu-latest
