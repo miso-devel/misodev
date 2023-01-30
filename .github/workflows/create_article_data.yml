@@ -5,6 +5,7 @@ on:
       - main
   repository_dispatch:
     types: [update_articles]
+    branches: main
 
 permissions: write-all
 
