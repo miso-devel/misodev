@@ -1,12 +1,30 @@
 [
   {
+    "id": "gu_6cquv2269",
+    "createdAt": "2023-01-29T21:02:55.559Z",
+    "updatedAt": "2023-01-30T05:05:07.536Z",
+    "publishedAt": "2023-01-29T21:02:55.559Z",
+    "revisedAt": "2023-01-30T05:05:07.536Z",
+    "title": "テスト",
+    "category": [
+      {
+        "id": "aj_4q66hiob6",
+        "createdAt": "2023-01-15T15:59:06.175Z",
+        "updatedAt": "2023-01-15T15:59:06.175Z",
+        "publishedAt": "2023-01-15T15:59:06.175Z",
+        "revisedAt": "2023-01-15T15:59:06.175Z",
+        "name": "適当"
+      }
+    ]
+  },
+  {
     "id": "khznw9gtjw",
     "createdAt": "2023-01-16T13:57:30.959Z",
-    "updatedAt": "2023-01-18T15:45:09.419Z",
+    "updatedAt": "2023-01-29T21:01:59.833Z",
     "publishedAt": "2023-01-16T13:57:30.959Z",
-    "revisedAt": "2023-01-18T15:45:09.419Z",
+    "revisedAt": "2023-01-29T21:01:59.833Z",
     "title": "Freshでポートフォリオサイト兼ブログ作った",
-    "content": "<p>もともと<code>Deno</code>に興味があったので<code>Fresh</code>さわれてよかった<br><br>その中でいくつか疑問に感じた部分があったので列挙していく</p><ul><li>islandの扱いがよくわからない</li><li>componentとかhooksとかどこに置こう</li></ul><p><br></p>",
+    "content": "<p>もともと<code>Deno</code>に興味があったので<code>Fresh</code>さわれてよかった<br><br>その中でいくつか疑問に感じた部分があったので列挙していく</p><ul><li>islandの扱いがよくわからない</li><li>componentとかhooksとかどこに置こう</li></ul><p><br>頑張ったところ</p><ul><li>github actions使って記事データ自動生成</li></ul><p><br></p>",
     "category": [
       {
         "id": "jqyr0v-tv7",
