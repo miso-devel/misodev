@@ -1,8 +1,8 @@
 name: CI/CD pipeline
 on:
-  push:
-    branches:
-      - main
+  repository_dispatch:
+    types: [update_articles]
+    branches: main
 
 permissions: write-all
 
