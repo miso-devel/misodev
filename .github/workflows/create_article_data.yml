@@ -3,8 +3,8 @@ on:
   push:
     branches:
       - main
-    repository_dispatch:
-      types: [update_articles]
+  repository_dispatch:
+    types: [update_articles]
 
 permissions: write-all
 
