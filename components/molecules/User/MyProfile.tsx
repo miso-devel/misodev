@@ -1,4 +1,4 @@
-import { skills } from '../../../static_data/skills.ts';
+import skills from '../../../static/json/skills.json' assert { type: 'json' };
 export const MyProfile = () => {
   return (
     <div class="bg-white shadow(2xl) m-auto w-5/6  md:w-2/5  md:h-2/3 p-5 rounded-md">
@@ -26,12 +26,12 @@ export const MyProfile = () => {
         <p>現在大学3年生。主にフロントエンド。</p>
         <p>ラーメン,Apexが好き</p>
       </div>
-      <div class="flex flex-wrap">
+      <div class="flex flex-grow  overflow-x-scroll">
         {skills.map((skill) => {
           return (
             <p
               style={{ backgroundColor: skill.color }}
-              class="mx-1 my-2 flex-grow p-2 rounded-md text-center"
+              class="mx-1 my-2 p-2 rounded-md text-center w-full whitespace-nowrap"
             >
               {skill.skill}
             </p>

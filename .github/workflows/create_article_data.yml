@@ -1,60 +1,61 @@
-name: CI/CD pipeline
-on:
-  push:
-    branches:
-      - main
+# pushの時はしなくていい
+# name: CI/CD pipeline
+# on:
+#   push:
+#     branches:
+#       - main
 
-permissions: write-all
+# permissions: write-all
 
-env:
-  MICROCMS_API_KEY: ${{ secrets.MICROCMS_API_KEY }}
+# env:
+#   MICROCMS_API_KEY: ${{ secrets.MICROCMS_API_KEY }}
 
-jobs:
-  production:
-    runs-on: macos-latest
+# jobs:
+#   production:
+#     runs-on: macos-latest
 
-    steps:
-      - name: actions/checkout
-        uses: actions/checkout@v2
+#     steps:
+#       - name: actions/checkout
+#         uses: actions/checkout@v2
 
-      - name: Setup/deno
-        uses: denoland/setup-deno@v1
-        with:
-          deno-version: '1.26.0'
+#       - name: Setup/deno
+#         uses: denoland/setup-deno@v1
+#         with:
+#           deno-version: '1.26.0'
 
-      - name: セットアップ
-        run: |
-          git config --local user.email "github-actions[bot]@users.noreply.github.com"
-          git config --local user.name "github-actions[bot]"
+#       - name: セットアップ
+#         run: |
+#           git config --local user.email "github-actions[bot]@users.noreply.github.com"
+#           git config --local user.name "github-actions[bot]"
 
-      - name: チェックアウト
-        run: |
-          git checkout main
-          git checkout -b update-information-by-github-action
+#       - name: チェックアウト
+#         run: |
+#           git checkout main
+#           git checkout -b update-information-by-github-action
 
-      - name: データ書き込み
-        run: |
-          deno run -A ./tasks/create_microcms_data.ts $MICROCMS_API_KEY
+#       - name: データ書き込み
+#         run: |
+#           deno run -A ./tasks/create_microcms_data.ts $MICROCMS_API_KEY
 
-      - name: git add
-        run: |
-          git add .
+#       - name: git add
+#         run: |
+#           git add .
 
-      - name: git commit
-        run: |
-          git commit -m "update information" || echo "no updated"
+#       - name: git commit
+#         run: |
+#           git commit -m "update information" || echo "no updated"
 
-      - name: git push
-        run: |
-          git push -u origin update-information-by-github-action
+#       - name: git push
+#         run: |
+#           git push -u origin update-information-by-github-action
 
-      - name: checkout main and merge
-        run: |
-          git checkout main
-          git pull origin main
-          git merge update-information-by-github-action
-          git push
+#       - name: checkout main and merge
+#         run: |
+#           git checkout main
+#           git pull origin main
+#           git merge update-information-by-github-action
+#           git push
 
-      - name: delete branch
-        run: |
-          git push origin --delete update-information-by-github-action
+#       - name: delete branch
+#         run: |
+#           git push origin --delete update-information-by-github-action

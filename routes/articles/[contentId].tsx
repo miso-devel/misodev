@@ -1,22 +1,15 @@
 import { Handlers, PageProps } from '$fresh/server.ts';
 import { TypoWrapper } from '../../components/atom/TypoWrapper.tsx';
-import { microcmsClient } from '../../lib/microcmsClient.ts';
 import { Head } from '$fresh/runtime.ts';
 import { type TArticle } from '../../types/Article.d.ts';
 import { BasicTemplate } from '../../components/Template/BasicTemplate.tsx';
 import ArticleContent from '../../islands/ArticleContent.tsx';
+import articles from '../../static/json/articles.json' assert { type: 'json' };
 export const handler: Handlers<TArticle> = {
-  async GET(_, ctx) {
-    const article = await microcmsClient
-      .get({
-        endpoint: `articles/${ctx.params.contentId}`,
-      })
-      .then((res) => {
-        return res;
-      })
-      .catch(() => {
-        return undefined;
-      });
+  GET(_, ctx) {
+    const article = articles.find(
+      (article) => article.id === ctx.params.contentId
+    );
     return ctx.render(article);
   },
 };
@@ -26,7 +19,9 @@ export default function ArticleContentPage({
   if (typeof article === 'undefined') {
     return (
       <BasicTemplate>
-        <TypoWrapper element="h1">記事が存在しません</TypoWrapper>
+        <TypoWrapper element="h1" className="text-center">
+          記事が存在しません
+        </TypoWrapper>
       </BasicTemplate>
     );
   }

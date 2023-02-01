@@ -7,10 +7,14 @@ type TProps = {
 export const ProfileTemplate = ({ children }: TProps) => {
   return (
     <BasicTemplate>
-      <TypoWrapper element="h1" className="text-center my-10">
-        profile
-      </TypoWrapper>
-      {children}
+      <div className=" h-screen">
+        <div>
+          <TypoWrapper element="h1" className="text-center my-10">
+            profile
+          </TypoWrapper>
+          {children}
+        </div>
+      </div>
     </BasicTemplate>
   );
 };

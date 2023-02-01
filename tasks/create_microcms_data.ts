@@ -1,29 +1,27 @@
 import { ensureDirSync } from 'fs';
 import { join } from 'path';
-import { createClient } from 'microcms';
-
-export const microcmsClient = createClient({
-  serviceDomain: 'misodev',
-  apiKey: `${Deno.args[0]}`,
-});
+import { microcmsClient } from '../lib/microcmsClient.ts';
 
 const articles = await microcmsClient
   .get({ endpoint: 'articles' })
   .then((res) => {
     return res.contents;
   });
-const data2 = {
-  message: 'data5sあああgggg',
-};
+const products = await microcmsClient
+  .get({ endpoint: 'products' })
+  .then((res) => {
+    return res.contents;
+  });
+
 const outputPath = './static/json/';
 ensureDirSync(outputPath);
 const articlesPath = join(outputPath, 'articles.json');
-const careersPath = join(outputPath, 'careers.json');
+const careersPath = join(outputPath, 'products.json');
 await Deno.writeFile(
   articlesPath,
   new TextEncoder().encode(JSON.stringify(articles, null, 2))
 );
 await Deno.writeFile(
   careersPath,
-  new TextEncoder().encode(JSON.stringify(data2, null, 2))
+  new TextEncoder().encode(JSON.stringify(products, null, 2))
 );
