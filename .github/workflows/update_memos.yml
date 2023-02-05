@@ -1,7 +1,7 @@
 name: update_article
 on:
   repository_dispatch:
-    types: [update_articles]
+    types: [update_memos]
     branches: main
 
 permissions: write-all
@@ -34,7 +34,7 @@ jobs:
 
       - name: データ書き込み
         run: |
-          deno run -A ./tasks/create_articles.ts $MICROCMS_API_KEY
+          deno run -A ./tasks/create_memos.ts $MICROCMS_API_KEY
 
       - name: git add
         run: |

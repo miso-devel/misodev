@@ -1,4 +1,4 @@
-import { TCategory } from '../../../types/Article.d.ts';
+import { TCategory } from '../../../types/Memo.d.ts';
 import { TypoWrapper } from '../../atom/TypoWrapper.tsx';
 type TProps = {
   id: string;
@@ -6,7 +6,7 @@ type TProps = {
   date: string;
   categories: TCategory[];
 };
-export const Article = ({ id, title, date, categories }: TProps) => {
+export const Memo = ({ id, title, date, categories }: TProps) => {
   return (
     <a class="bg-white p-5 rounded-md" href={`memos/${id}`}>
       <TypoWrapper

@@ -5,7 +5,7 @@ import { LinkTo } from '../components/atom/LinkTo.tsx';
 type TProps = {
   content: string;
 };
-export default function ArticleContent({ content }: TProps) {
+export default function MemoContent({ content }: TProps) {
   const [sanitized, setSanitized] = useState('');
   useEffect(() => {
     setSanitized(DOMPurify.sanitize(content));

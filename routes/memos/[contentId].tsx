@@ -1,21 +1,19 @@
 import { Handlers, PageProps } from '$fresh/server.ts';
 import { TypoWrapper } from '../../components/atom/TypoWrapper.tsx';
 import { Head } from '$fresh/runtime.ts';
-import { type TArticle } from '../../types/Article.d.ts';
+import { type TMemo } from '../../types/Memo.d.ts';
 import { BasicTemplate } from '../../components/Template/shared/BasicTemplate.tsx';
-import ArticleContent from '../../islands/ArticleContent.tsx';
-import articles from '../../static/json/articles.json' assert { type: 'json' };
-export const handler: Handlers<TArticle> = {
+import MemoContent from '../../islands/MemoContent.tsx';
+import memos from '../../static/json/memos.json' assert { type: 'json' };
+export const handler: Handlers<TMemo> = {
   GET(_, ctx) {
-    const article = articles.find(
-      (article) => article.id === ctx.params.contentId
-    );
-    return ctx.render(article);
+    const memo = memos.find((memo) => memo.id === ctx.params.contentId);
+    return ctx.render(memo);
   },
 };
 export default function ArticleContentPage({
   data: article,
-}: PageProps<TArticle | undefined>) {
+}: PageProps<TMemo | undefined>) {
   if (typeof article === 'undefined') {
     return (
       <BasicTemplate path="$1" title="">
@@ -34,7 +32,7 @@ export default function ArticleContentPage({
         <link rel="stylesheet" href="/styles/Article.css" />
       </Head>
       <BasicTemplate title={article.title}>
-        <ArticleContent content={article.content} />
+        <MemoContent content={article.content} />
       </BasicTemplate>
     </>
   );

@@ -1,4 +1,4 @@
-export type TArticle = {
+export type TMemo = {
   id: string;
   updatedAt: string;
   title: string;
