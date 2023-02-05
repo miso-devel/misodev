@@ -2,11 +2,11 @@
   {
     "id": "f5we-9xy61ay",
     "createdAt": "2023-01-15T16:03:30.944Z",
-    "updatedAt": "2023-01-18T15:43:52.344Z",
+    "updatedAt": "2023-02-05T11:00:51.897Z",
     "publishedAt": "2023-01-15T16:03:30.944Z",
-    "revisedAt": "2023-01-18T15:43:52.344Z",
-    "title": "ブログ始めた",
-    "content": "<h3 id=\"hca2f0d8fcc\">始めた経緯</h3><ul><li>なんとなくZennとかに載せるには重いけど自分のメモにしては軽いなって感じがしてる出来事をかけるところを探していた</li><li>そういえばポートフォリオサイトとか作っては消してを繰り返してたのでブログ付きのポートフォリオつくろうと思ってた</li></ul><h3 id=\"hd4d34ed888\">技術</h3><ul><li>Fresh</li><li>microCMS</li></ul><p><br></p>",
+    "revisedAt": "2023-02-05T11:00:51.897Z",
+    "title": "ポートフォリオサイト作った",
+    "content": "<h3 id=\"hc7260bb88e\">作った経緯</h3><ul><li>DenoのwebフレームワークFreshを使いたかった</li><li>自分のプロダクトとかまとめてなかったので確認するの面倒だった</li></ul><h3 id=\"hd4d34ed888\">技術</h3><ul><li>Deno</li><li>Fresh</li><li>microCMS</li></ul><p><br></p>",
     "category": [
       {
         "id": "aj_4q66hiob6",
