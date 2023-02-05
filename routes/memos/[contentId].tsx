@@ -2,7 +2,7 @@ import { Handlers, PageProps } from '$fresh/server.ts';
 import { TypoWrapper } from '../../components/atom/TypoWrapper.tsx';
 import { Head } from '$fresh/runtime.ts';
 import { type TArticle } from '../../types/Article.d.ts';
-import { BasicTemplate } from '../../components/Template/BasicTemplate.tsx';
+import { BasicTemplate } from '../../components/Template/shared/BasicTemplate.tsx';
 import ArticleContent from '../../islands/ArticleContent.tsx';
 import articles from '../../static/json/articles.json' assert { type: 'json' };
 export const handler: Handlers<TArticle> = {
@@ -18,10 +18,12 @@ export default function ArticleContentPage({
 }: PageProps<TArticle | undefined>) {
   if (typeof article === 'undefined') {
     return (
-      <BasicTemplate>
-        <TypoWrapper element="h1" className="text-center">
-          記事が存在しません
-        </TypoWrapper>
+      <BasicTemplate path="$1" title="">
+        <TypoWrapper
+          element="h1"
+          className="text-center"
+          word="記事が存在しません"
+        />
       </BasicTemplate>
     );
   }
@@ -31,8 +33,8 @@ export default function ArticleContentPage({
         <title>miso.dev</title>
         <link rel="stylesheet" href="/styles/Article.css" />
       </Head>
-      <BasicTemplate>
-        <ArticleContent title={article.title} content={article.content} />
+      <BasicTemplate title={article.title}>
+        <ArticleContent content={article.content} />
       </BasicTemplate>
     </>
   );

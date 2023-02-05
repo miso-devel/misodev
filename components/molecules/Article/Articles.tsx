@@ -5,7 +5,7 @@ type TProps = {
 };
 export const Articles = ({ articles }: TProps) => {
   return (
-    <>
+    <div class="grid grid-cols-1 gap-10 md:grid-cols-3 mx-5 break-all">
       {articles.map((article) => {
         return (
           <Article
@@ -16,6 +16,6 @@ export const Articles = ({ articles }: TProps) => {
           />
         );
       })}
-    </>
+    </div>
   );
 };

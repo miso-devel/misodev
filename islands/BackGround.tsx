@@ -29,7 +29,7 @@ export default function ParticleComponent() {
           enable: true,
           zIndex: -1,
         },
-        fpsLimit: 120,
+        fpsLimit: 160,
         particles: {
           move: {
             enable: true,

@@ -1,9 +1,22 @@
-import { MyProfile } from '../components/molecules/User/MyProfile.tsx';
-import { ProfileTemplate } from '../components/Template/ProfileTemplate.tsx';
-export default function Home() {
+import { Handlers, PageProps } from 'https://deno.land/x/fresh@1.1.2/server.ts';
+import { BasicTemplate } from '../components/Template/shared/BasicTemplate.tsx';
+import { UserTemplate } from '../components/Template/UserTemplate.tsx';
+type TPageProps = {
+  request: Request;
+};
+export const handler: Handlers<TPageProps> = {
+  GET(request, ctx) {
+    const data = { request };
+    return ctx.render(data);
+  },
+};
+export default function Home({ data }: PageProps<TPageProps>) {
   return (
-    <ProfileTemplate>
-      <MyProfile />
-    </ProfileTemplate>
+    <BasicTemplate
+      path={data.request.url.split('/').reverse()[0]}
+      title={'profile'}
+    >
+      <UserTemplate />
+    </BasicTemplate>
   );
 }
