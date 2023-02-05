@@ -9,7 +9,6 @@ export const UserTemplate = () => {
       <UserProfile />
       <UserSkills />
       <UserProducts />
-      <UserCareers />
     </div>
   );
 };
