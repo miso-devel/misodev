@@ -2,11 +2,11 @@
   {
     "id": "dtz79egrei1e",
     "createdAt": "2023-02-06T13:08:57.951Z",
-    "updatedAt": "2023-02-06T13:08:57.951Z",
+    "updatedAt": "2023-02-06T13:09:43.644Z",
     "publishedAt": "2023-02-06T13:08:57.951Z",
-    "revisedAt": "2023-02-06T13:08:57.951Z",
+    "revisedAt": "2023-02-06T13:09:43.644Z",
     "title": "Preactのcompatについて",
-    "content": "<h2 id=\"h2675cbd220\">調べた経緯</h2><p>このサイトを作ってる際に<code>react-particles</code>を使っているが、<code>https://esm.sh/react-particles@2.8.0</code>では正常に使えず、<code>https://esm.sh/v106/react-particles@2.8.0?alias=react:preact/compat&amp;external=preact/compat</code>\tでは使える理由がよく分かってなかった。<br></p><h2 id=\"he4b3b364ec\">調べて分かったこと</h2><ul><li><code>Preact</code>ではReactよりも機能を減らし、最低限の機能を提供しているっぽい。</li><li>その結果、Reactで利用できるライブラリがPreactでは利用できないことがある。この両者の違いを解決する方法として<code>Preact/compat</code>がある。</li><li><code>preact/compat</code>は、React, ReactDOMとの互換性を保つためのレイヤーであり、これを使うとReact、ReactDOM上で動くライブラリ等は動くようになる？</li></ul><p><br></p><h2 id=\"h3de35099b3\">参考</h2><p>https://preactjs.com/guide/v10/differences-to-react<br></p>",
+    "content": "<h2 id=\"h2675cbd220\">調べた経緯</h2><p>このサイトを作ってる際に<code>react-particles</code>を使っているが、<code>https://esm.sh/react-particles@2.8.0</code>では正常に使えず、<code>https://esm.sh/v106/react-particles@2.8.0?alias=react:preact/compat&amp;external=preact/compat</code>\tでは使える理由がよく分かってなかった。<br></p><h2 id=\"he4b3b364ec\">調べて分かったこと</h2><ul><li><code>Preact</code>ではReactよりも機能を減らし、最低限の機能を提供しているっぽい。</li><li>その結果、Reactで利用できるライブラリがPreactでは利用できないことがある。この両者の違いを解決する方法として<code>Preact/compat</code>がある。</li><li><code>preact/compat</code>は、React, ReactDOMとの互換性を保つためのレイヤーであり、これを使うとReact、ReactDOM上で動くライブラリ等は動くようになる？</li></ul><p><br></p><h2 id=\"h3de35099b3\">参考</h2><p>https://preactjs.com/guide/v10/differences-to-react<br>https://preactjs.com/guide/v10/switching-to-preact/</p>",
     "category": []
   },
   {
