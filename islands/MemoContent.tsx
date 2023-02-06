@@ -1,4 +1,3 @@
-import { TypoWrapper } from '../components/atom/TypoWrapper.tsx';
 import { useEffect, useState } from 'preact/hooks';
 import DOMPurify from 'dompurify';
 import { LinkTo } from '../components/atom/LinkTo.tsx';
@@ -14,7 +13,11 @@ export default function MemoContent({ content }: TProps) {
   return (
     <div class="py-3 md:px-10 px-3">
       <div class="bg-white p-5 md:p-10 rounded-md">
-        <div dangerouslySetInnerHTML={{ __html: sanitized }} id="contents" />
+        <div
+          dangerouslySetInnerHTML={{ __html: sanitized }}
+          id="contents"
+          class="break-all"
+        />
         <div class="text-center">
           <LinkTo href="/memos">記事一覧へ</LinkTo>
         </div>
