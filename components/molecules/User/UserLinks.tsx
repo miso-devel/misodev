@@ -2,7 +2,7 @@ import { ImageLink } from '../../atom/ImageLink.tsx';
 
 export const UserLinks = () => {
   return (
-    <div class="flex gap-5 py-3 ml-auto">
+    <div class="flex px-2 gap-2">
       <ImageLink
         href="https://twitter.com/donennnn"
         imgLink="/images/Twitter.png"

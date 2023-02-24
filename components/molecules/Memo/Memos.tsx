@@ -5,7 +5,7 @@ type TProps = {
 };
 export const Memos = ({ memos }: TProps) => {
   return (
-    <div class="grid grid-cols-1 gap-10 md:grid-cols-3 mx-5 break-all">
+    <div class="grid grid-cols-1 gap-10 lg:grid-cols-3 mx-5 break-all text-black">
       {memos.map((memo) => {
         return (
           <Memo

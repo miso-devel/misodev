@@ -8,8 +8,9 @@ export default function App({ Component }: AppProps) {
         <title>miso.dev</title>
         <link rel="stylesheet" href="/styles/App.css" />
       </Head>
-      <ParticleComponent />
+
       <Component />
+      {/* <ParticleComponent /> */}
     </>
   );
 }

@@ -1,11 +1,16 @@
+import { TypoWrapper } from '../../atom/TypoWrapper.tsx';
+import { UserLinks } from './UserLinks.tsx';
+
 export const UserDetail = () => {
   return (
-    <div class="my-5 ml-2">
-      <p>B3、主にフロントエンド。興味のある技術はDeno,Freshです。</p>
-      <p>
-        株式会社はてなアルバイト中。株式会社キーザンキーザンでインターン中。
-      </p>
-      <p>ラーメン,Apexが好き</p>
+    <div class="py-10">
+      <TypoWrapper
+        element="h2"
+        className="mb-5 border-b-2 pb-1"
+        word="プロフィール"
+      />
+      <p>B3 フロントエンドが好き</p>
+      <p>趣味はゲーム</p>
     </div>
   );
 };

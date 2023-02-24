@@ -8,17 +8,32 @@ export const UserProducts = () => {
     return null;
   }
   return (
-    <>
+    <div class="py-10">
       <TypoWrapper
         element="h2"
-        className="text-center mt-20"
+        className="mb-5 border-b-2 pb-1"
         word="開発したプロダクト"
       />
-      <div class="flex gap-3 overflow-x-scroll">
-        {products.map((product: TProduct) => {
-          return <UserProduct product={product} />;
-        })}
+      <div class="overflow-x-scroll">
+        <table
+          cellPadding={10}
+          className="border border-white w-full text-left"
+        >
+          <thead class="border-b-1">
+            <tr>
+              <th>時期</th>
+              <th>作品名</th>
+              <th>作った経緯</th>
+              <th>役割</th>
+            </tr>
+          </thead>
+          <tbody>
+            {products.map((product: TProduct) => {
+              return <UserProduct product={product} />;
+            })}
+          </tbody>
+        </table>
       </div>
-    </>
+    </div>
   );
 };

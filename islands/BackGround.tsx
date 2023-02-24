@@ -10,7 +10,6 @@ export default function ParticleComponent() {
       id="tsparticles"
       init={particlesInit}
       options={{
-        autoPlay: true,
         background: {
           color: {
             value: '#8FB6D9',
@@ -29,7 +28,7 @@ export default function ParticleComponent() {
           enable: true,
           zIndex: -1,
         },
-        fpsLimit: 160,
+        fpsLimit: 60,
         particles: {
           move: {
             enable: true,
@@ -40,7 +39,7 @@ export default function ParticleComponent() {
             speed: 1,
           },
           number: {
-            value: 400,
+            value: 100,
           },
           opacity: {
             value: {

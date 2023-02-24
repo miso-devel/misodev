@@ -9,7 +9,7 @@ type TProps = {
 
 export const BasicTemplate = ({ children, path, title }: TProps) => {
   return (
-    <main className="font-mono md:w-1/2 w-full  m-auto blur min-h-full md:border-r-4 md:border-l-4 border-white">
+    <main className="font-mono md:w-3/5 w-full  m-auto min-h-full border-white">
       <Header path={path} />
       <TypoWrapper element="h1" className="text-center my-10" word={title} />
       {children}

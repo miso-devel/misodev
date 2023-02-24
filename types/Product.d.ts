@@ -6,12 +6,8 @@ export type TProduct = {
   revisedAt: string;
   site: string;
   description: string;
+  position: string;
   url: string;
-  image: {
-    url: string;
-    height: number;
-    width: number;
-  };
   isSiteOpen: boolean;
   githubUrl: string;
   producedAt?: string;
