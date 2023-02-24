@@ -1,21 +1,12 @@
 [
   {
-    "id": "89cwwj_rso2",
-    "createdAt": "2023-02-24T13:00:33.928Z",
-    "updatedAt": "2023-02-24T13:00:33.928Z",
-    "publishedAt": "2023-02-24T13:00:33.928Z",
-    "revisedAt": "2023-02-24T13:00:33.928Z",
-    "title": "自作React記事やってみた",
-    "category": []
-  },
-  {
     "id": "lm88369jaz",
     "createdAt": "2023-02-07T23:44:20.156Z",
-    "updatedAt": "2023-02-07T23:44:20.156Z",
+    "updatedAt": "2023-02-24T16:52:17.338Z",
     "publishedAt": "2023-02-07T23:44:20.156Z",
-    "revisedAt": "2023-02-07T23:44:20.156Z",
+    "revisedAt": "2023-02-24T16:52:17.338Z",
     "title": "TwindとTailwind.cssの違い",
-    "content": "<h3 id=\"h2675cbd220\">調べた経緯</h3><p>Freshでスタイリングに使われてるのがTailwind.cssではなくTwindだったので気になった<br></p><h3 id=\"he4b3b364ec\">調べて分かったこと</h3><ul><li>Twindは実行時にTailwind.cssで使用できるユーティリティクラスをコンパイルするコンパイラ？</li><li>コンパイラを同梱しているからビルドステップが不要？</li></ul><p>調査中...</p>",
+    "content": "<h3 id=\"h2675cbd220\">調べた経緯</h3><p>Freshでスタイリングに使われてるのがTailwind.cssではなくTwindだったので気になった<br></p><h3 id=\"he4b3b364ec\">調べて分かったこと</h3><ul><li>Twindは実行時にTailwind.cssで使用できるユーティリティクラスをコンパイルするコンパイラ？</li><li>コンパイラを同梱しているからビルドステップが不要？</li></ul><p>調査中です...<br></p>",
     "category": []
   },
   {
