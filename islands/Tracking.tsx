@@ -1,12 +1,16 @@
 import { useEffect } from 'preact/hooks';
 import ReactGA from 'react-ga4';
-export default function Tracking() {
+type TProps = {
+  trackingId: string;
+};
+export default function Tracking({ trackingId }: TProps) {
   useEffect(() => {
-    ReactGA.initialize('G-4MWGG1LLJL');
+    ReactGA.initialize(trackingId);
     ReactGA.send({
       hitType: 'pageview',
       page: location.href,
     });
+    console.log('aaa');
   }, []);
   return <div></div>;
 }
