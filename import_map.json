@@ -15,6 +15,7 @@
     "dompurify": "https://esm.sh/dompurify@2.3.8",
     "react-particles": "https://esm.sh/v106/react-particles@2.8.0?alias=react:preact/compat&external=preact/compat",
     "tsparticles-engine": "https://esm.sh/v106/tsparticles-engine@2.8.0",
-    "tsparticles": "https://esm.sh/v106/tsparticles@2.8.0"
+    "tsparticles": "https://esm.sh/v106/tsparticles@2.8.0",
+    "react-ga4": "https://esm.sh/v107/react-ga4@2.0.0?alias=react:preact/compat&external=preact/compat"
   }
 }

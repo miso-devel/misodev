@@ -32,7 +32,11 @@ export default function ArticleContentPage({
         <link rel="stylesheet" href="/styles/Article.css" />
       </Head>
       <BasicTemplate title={article.title}>
-        <MemoContent content={article.content} />
+        {article.content ? (
+          <MemoContent content={article.content} />
+        ) : (
+          <p>コンテンツがありません</p>
+        )}
       </BasicTemplate>
     </>
   );

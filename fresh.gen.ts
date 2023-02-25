@@ -9,6 +9,7 @@ import * as $2 from "./routes/memos/[contentId].tsx";
 import * as $3 from "./routes/memos/index.tsx";
 import * as $$0 from "./islands/BackGround.tsx";
 import * as $$1 from "./islands/MemoContent.tsx";
+import * as $$2 from "./islands/Tracking.tsx";
 
 const manifest = {
   routes: {
@@ -20,6 +21,7 @@ const manifest = {
   islands: {
     "./islands/BackGround.tsx": $$0,
     "./islands/MemoContent.tsx": $$1,
+    "./islands/Tracking.tsx": $$2,
   },
   baseUrl: import.meta.url,
   config,

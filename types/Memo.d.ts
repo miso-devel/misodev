@@ -2,7 +2,7 @@ export type TMemo = {
   id: string;
   updatedAt: string;
   title: string;
-  content: string;
+  content?: string;
   category: TCategory[];
 };
 export type TCategory = {

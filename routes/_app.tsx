@@ -1,6 +1,6 @@
 import { AppProps } from '$fresh/server.ts';
 import { Head } from '$fresh/runtime.ts';
-import ParticleComponent from '../islands/BackGround.tsx';
+import Tracking from '../islands/Tracking.tsx';
 export default function App({ Component }: AppProps) {
   return (
     <>
@@ -8,7 +8,7 @@ export default function App({ Component }: AppProps) {
         <title>miso.dev</title>
         <link rel="stylesheet" href="/styles/App.css" />
       </Head>
-
+      <Tracking />
       <Component />
       {/* <ParticleComponent /> */}
     </>
