@@ -7,6 +7,7 @@ import * as $0 from "./routes/_app.tsx";
 import * as $1 from "./routes/index.tsx";
 import * as $2 from "./routes/memos/[contentId].tsx";
 import * as $3 from "./routes/memos/index.tsx";
+import * as $4 from "./routes/privacyPolicy/index.tsx";
 import * as $$0 from "./islands/BackGround.tsx";
 import * as $$1 from "./islands/MemoContent.tsx";
 import * as $$2 from "./islands/Tracking.tsx";
@@ -17,6 +18,7 @@ const manifest = {
     "./routes/index.tsx": $1,
     "./routes/memos/[contentId].tsx": $2,
     "./routes/memos/index.tsx": $3,
+    "./routes/privacyPolicy/index.tsx": $4,
   },
   islands: {
     "./islands/BackGround.tsx": $$0,

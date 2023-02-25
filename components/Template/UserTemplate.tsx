@@ -5,7 +5,7 @@ import { UserProfile } from '../organisms/User/UserProfile.tsx';
 
 export const UserTemplate = () => {
   return (
-    <div class="px-5">
+    <div>
       <UserProfile />
       <UserDetail />
       <UserSkills />
