@@ -18,7 +18,7 @@ export default function MemoContent({ content }: TProps) {
           id="contents"
           class="break-all"
         />
-        <div class="text-center">
+        <div class="text-center text-black">
           <LinkTo href="/memos">記事一覧へ</LinkTo>
         </div>
       </div>
