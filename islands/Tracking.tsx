@@ -10,7 +10,6 @@ export default function Tracking({ trackingId }: TProps) {
       hitType: 'pageview',
       page: location.href,
     });
-    console.log('aaa');
   }, []);
   return <div></div>;
 }
