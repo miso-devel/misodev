@@ -15,7 +15,7 @@ export default function Home({ data }: PageProps<TPageProps>) {
     <BasicTemplate
       path={data.request.url.split('/').reverse()[0]}
       title=""
-      headTitle=""
+      headTitle="miso.dev"
     >
       <UserTemplate />
     </BasicTemplate>
