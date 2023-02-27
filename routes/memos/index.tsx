@@ -19,7 +19,11 @@ export default function ArticlesPage({ data }: PageProps<TPageProps>) {
     return <TypoWrapper element="h1" word="記事が取得できませんでした" />;
   }
   return (
-    <BasicTemplate path={data.request.url.split('/').reverse()[0]} title="メモ">
+    <BasicTemplate
+      path={data.request.url.split('/').reverse()[0]}
+      title="メモ"
+      headTitle="memos"
+    >
       <Memos memos={data.memos} />
     </BasicTemplate>
   );

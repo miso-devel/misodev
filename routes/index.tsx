@@ -12,7 +12,11 @@ export const handler: Handlers<TPageProps> = {
 };
 export default function Home({ data }: PageProps<TPageProps>) {
   return (
-    <BasicTemplate path={data.request.url.split('/').reverse()[0]} title={''}>
+    <BasicTemplate
+      path={data.request.url.split('/').reverse()[0]}
+      title=""
+      headTitle=""
+    >
       <UserTemplate />
     </BasicTemplate>
   );

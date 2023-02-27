@@ -3,7 +3,11 @@ import { BasicTemplate } from '../../components/Template/shared/BasicTemplate.ts
 
 export default function PrivacyPage() {
   return (
-    <BasicTemplate path={'privacyPolicy'} title={'プライバシーポリシー'}>
+    <BasicTemplate
+      path={'privacyPolicy'}
+      title="プライバシーポリシー"
+      headTitle="プライバシーポリシー"
+    >
       <span class="block pb-4">
         当サイトでは、Googleによるアクセス解析ツール「Googleアナリティクス」を使用しています。
       </span>
