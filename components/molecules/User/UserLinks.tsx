@@ -8,7 +8,7 @@ export const UserLinks = () => {
         imgLink="/images/Twitter.png"
       />
       <ImageLink
-        href="https://github.com/nisi0929"
+        href="https://github.com/mis0dev"
         imgLink="/images/Github.png"
       />
     </div>
