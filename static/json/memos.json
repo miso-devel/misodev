@@ -2,11 +2,11 @@
   {
     "id": "rc89w-_ckn5",
     "createdAt": "2023-03-10T09:06:26.624Z",
-    "updatedAt": "2023-03-11T04:31:53.768Z",
+    "updatedAt": "2023-03-11T04:40:56.700Z",
     "publishedAt": "2023-03-11T04:31:53.768Z",
-    "revisedAt": "2023-03-11T04:31:53.768Z",
+    "revisedAt": "2023-03-11T04:40:56.700Z",
     "title": "よくわかってなかったモジュールバンドラーについて",
-    "content": "<h2 id=\"h2675cbd220\">調べた経緯</h2><p><a href=\"https://www.rspack.dev/\" target=\"_blank\" rel=\"noopener noreferrer\">Rspack</a>という高速のモジュールバンドラーが出たらしくそういえばあんまりモジュールバンドラーのこと知らないなって思ったから<br></p><h2 id=\"h18a558e6a3\">モジュールバンドラーとは？</h2><p>モジュールをひとまとめにする（バンドルする）もの。<br></p><h4 id=\"hb99138cc93\">モジュールって？</h4><p>変数や関数をまとめたものです。JavaScriptdeでは1ファイルがそれに対応するものとなっています。</p><h2 id=\"h3c2a67e62b\"><br>なぜ使う？</h2><ul><li>可読性の面でファイルを分けて開発がしたい</li><li>ブラウザからのリクエスト数を減らしたい</li></ul><p><br></p><h2 id=\"h3de35099b3\">参考</h2><ul><li>https://blog.mach3.jp/2016/10/01/module-bundler.html</li><li>https://jsprimer.net/basic/module/</li><li>https://zenn.dev/oreo2990/articles/8581ad93276f0c</li></ul>",
+    "content": "<h2 id=\"h2675cbd220\">調べた経緯</h2><p><a href=\"https://www.rspack.dev/\" target=\"_blank\" rel=\"noopener noreferrer\">Rspack</a>という高速のモジュールバンドラーが出たらしくそういえばあんまりモジュールバンドラーのこと知らないなって思ったから<br></p><h2 id=\"h18a558e6a3\">モジュールバンドラーとは？</h2><p>モジュールをひとまとめにする（バンドルする）もの。<br></p><blockquote>モジュールって？<br>変数や関数をまとめたものです。JavaScriptdeでは1ファイルがそれに対応するものとなっています。</blockquote><h2 id=\"h3c2a67e62b\"><br>なぜ使う？</h2><ul><li>可読性の面でファイルを分けて開発がしたい</li><li>ブラウザからのリクエスト数を減らしたい</li></ul><p><br></p><h2 id=\"h3de35099b3\">参考</h2><p><a href=\"https://blog.mach3.jp/2016/10/01/module-bundler.html\" target=\"_blank\" rel=\"noopener noreferrer\">https://blog.mach3.jp/2016/10/01/module-bundler.html</a><br><a href=\"https://jsprimer.net/basic/module/\" target=\"_blank\" rel=\"noopener noreferrer\">https://jsprimer.net/basic/module/</a><br><a href=\"https://zenn.dev/oreo2990/articles/8581ad93276f0c\" target=\"_blank\" rel=\"noopener noreferrer\">https://zenn.dev/oreo2990/articles/8581ad93276f0c</a><br></p>",
     "category": []
   },
   {
