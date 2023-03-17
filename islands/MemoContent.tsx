@@ -11,7 +11,7 @@ export default function MemoContent({ content }: TProps) {
   }, []);
 
   return (
-    <div class="py-3 md:px-10 px-3">
+    <div class="py-3">
       <div class="bg-white p-5 md:p-10 rounded-md">
         <div
           dangerouslySetInnerHTML={{ __html: sanitized }}
