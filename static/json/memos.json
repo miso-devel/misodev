@@ -1,5 +1,24 @@
 [
   {
+    "id": "8wjju_xlgl3",
+    "createdAt": "2023-03-29T14:19:12.982Z",
+    "updatedAt": "2023-03-29T14:19:12.982Z",
+    "publishedAt": "2023-03-29T14:19:12.982Z",
+    "revisedAt": "2023-03-29T14:19:12.982Z",
+    "title": "Decoratorって何",
+    "content": "<h2 id=\"h2675cbd220\">調べた経緯</h2><ul><li>最近Nest.jsを触った際にDecoratorという概念に初めて触れたため</li></ul><p><br></p><h2 id=\"ha3117537f3\">Decoratorとは？</h2><ul><li>クラス宣言、メソッド、アクセサ、プロパティ、またはパラメータにアタッチできる特別な種類の宣言のことらしいです</li></ul><p><br></p><h2 id=\"hb0413eba38\">どんなことができる？</h2><p>クラス、メソッド、プロパティに対して上書きしたり、修正したり、検査したり色々できる。<br><br>まだあんまりわかってないので実際に<a href=\"https://www.typescriptlang.org/play\" target=\"_blank\" rel=\"noopener noreferrer\">https://www.typescriptlang.org/play</a>で試したらもう少し理解が深まりそう</p><h2 id=\"h3de35099b3\"><br><br>参考</h2><ul><li><a href=\"https://zenn.dev/miruoon_892/articles/365675fa5343ed\" target=\"_blank\" rel=\"noopener noreferrer\">https://zenn.dev/miruoon_892/articles/365675fa5343ed</a></li><li><a href=\"https://zenn.dev/monicle/articles/b6a409eeb62f41\" target=\"_blank\" rel=\"noopener noreferrer\">https://zenn.dev/monicle/articles/b6a409eeb62f41</a></li></ul>",
+    "category": [
+      {
+        "id": "t4d_p3uadwjt",
+        "createdAt": "2023-03-29T13:27:36.728Z",
+        "updatedAt": "2023-03-29T13:27:36.728Z",
+        "publishedAt": "2023-03-29T13:27:36.728Z",
+        "revisedAt": "2023-03-29T13:27:36.728Z",
+        "name": "TypeScript"
+      }
+    ]
+  },
+  {
     "id": "yc88xbhad1",
     "createdAt": "2023-03-17T17:40:32.310Z",
     "updatedAt": "2023-03-17T17:51:39.476Z",
