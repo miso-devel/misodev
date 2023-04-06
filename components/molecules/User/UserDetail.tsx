@@ -9,7 +9,7 @@ export const UserDetail = () => {
         className="mb-5 border-b-2 pb-1"
         word="プロフィール"
       />
-      <p>B3 フロントエンドが好き</p>
+      <p>B4 フロントエンドが好き</p>
       <p>趣味はゲーム</p>
     </div>
   );
