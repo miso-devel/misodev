@@ -1,3 +1,4 @@
+// memoのTypeです
 export type TMemo = {
   id: string;
   updatedAt: string;
