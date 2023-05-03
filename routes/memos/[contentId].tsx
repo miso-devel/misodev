@@ -16,11 +16,11 @@ export default function ArticleContentPage({
 }: PageProps<TMemo | undefined>) {
   if (typeof article === 'undefined') {
     return (
-      <BasicTemplate path="$1" title="" headTitle="">
+      <BasicTemplate path='$1' title='' headTitle=''>
         <TypoWrapper
-          element="h1"
-          className="text-center"
-          word="記事が存在しません"
+          element='h1'
+          className='text-center'
+          word='記事が存在しません'
         />
       </BasicTemplate>
     );
@@ -28,7 +28,7 @@ export default function ArticleContentPage({
   return (
     <>
       <Head>
-        <link rel="stylesheet" href="/styles/Article.css" />
+        <link rel='stylesheet' href='/styles/Article.css' />
       </Head>
       <BasicTemplate title={article.title} headTitle={article.title}>
         {article.content ? (

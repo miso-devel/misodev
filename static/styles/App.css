@@ -8,13 +8,20 @@ html {
 }
 ::-webkit-scrollbar-thumb {
   background: rgba(224, 231, 255);
+  scrollbar-color: rgba(224, 231, 255);
   border-radius: 10px;
   box-shadow: 100%;
 }
 ::-webkit-scrollbar {
   height: 2px;
+  scrollbar-width: none;
   width: 5px;
 }
 .blur {
   backdrop-filter: blur(5px);
+}
+/* firefoxで::-webkit-scrollbarがサポートされてないので上書き */
+.overflow-x-scroll {
+  overflow-x: scroll;
+  scrollbar-width: none;
 }
