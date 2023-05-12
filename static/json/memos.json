@@ -1,5 +1,15 @@
 [
   {
+    "id": "oz-v5htsqp0r",
+    "createdAt": "2023-05-12T12:24:15.588Z",
+    "updatedAt": "2023-05-12T12:24:15.588Z",
+    "publishedAt": "2023-05-12T12:24:15.588Z",
+    "revisedAt": "2023-05-12T12:24:15.588Z",
+    "title": "Macのストレージ結構増えてたので減らした時にやったこと",
+    "content": "<h2 id=\"hd2c91c24e4\">経緯</h2><p>256GB中150GBくらいになっていたのでなんとなく減らしたいなと思ったから<br></p><h2 id=\"h2a2f9a7483\">調査方法</h2><p>システム設定 ＞ 一般 ＞ ストレージを眺めてみたり</p><pre><code>sudo du -sh ./*| sort -nr</code></pre><p>を圧迫してそうなところで実行していった</p><h2 id=\"h2220f0ef7d\">やったこと</h2><p>主にキャッシュの削除</p><pre><code>// docker関連のキャッシュの削除っぽい\nrm -rf ~/Library/Containers/com.docker.docker/Data/*\n\n// yarnのキャッシュの削除\nyarn cache clean</code></pre><p><br></p><h2 id=\"hb6509f48bf\">結果</h2><p>40GBくらい減ったのでよかった<br></p><h2 id=\"h3de35099b3\">参考</h2><ul><li><a href=\"https://qiita.com/ktsujichan/items/726e0f896e30b355fee1\" target=\"_blank\" rel=\"noopener noreferrer\">https://qiita.com/ktsujichan/items/726e0f896e30b355fee1</a></li><li>調査方法のコマンドもどこかを参考にしたけど覚えてなかった..</li></ul><p><br></p>",
+    "category": []
+  },
+  {
     "id": "8wjju_xlgl3",
     "createdAt": "2023-03-29T14:19:12.982Z",
     "updatedAt": "2023-03-29T14:19:12.982Z",
