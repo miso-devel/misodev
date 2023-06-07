@@ -88,10 +88,10 @@
       {
         "id": "aj_4q66hiob6",
         "createdAt": "2023-01-15T15:59:06.175Z",
-        "updatedAt": "2023-01-15T15:59:06.175Z",
+        "updatedAt": "2023-06-07T17:25:46.531Z",
         "publishedAt": "2023-01-15T15:59:06.175Z",
-        "revisedAt": "2023-01-15T15:59:06.175Z",
-        "name": "適当"
+        "revisedAt": "2023-06-07T17:25:46.531Z",
+        "name": "趣味"
       }
     ]
   },
@@ -118,20 +118,11 @@
   {
     "id": "f5we-9xy61ay",
     "createdAt": "2023-01-15T16:03:30.944Z",
-    "updatedAt": "2023-02-05T11:00:51.897Z",
+    "updatedAt": "2023-06-07T17:31:22.158Z",
     "publishedAt": "2023-01-15T16:03:30.944Z",
-    "revisedAt": "2023-02-05T11:00:51.897Z",
+    "revisedAt": "2023-06-07T17:31:22.158Z",
     "title": "ポートフォリオサイト作った",
     "content": "<h3 id=\"hc7260bb88e\">作った経緯</h3><ul><li>DenoのwebフレームワークFreshを使いたかった</li><li>自分のプロダクトとかまとめてなかったので確認するの面倒だった</li></ul><h3 id=\"hd4d34ed888\">技術</h3><ul><li>Deno</li><li>Fresh</li><li>microCMS</li></ul><p><br></p>",
-    "category": [
-      {
-        "id": "aj_4q66hiob6",
-        "createdAt": "2023-01-15T15:59:06.175Z",
-        "updatedAt": "2023-01-15T15:59:06.175Z",
-        "publishedAt": "2023-01-15T15:59:06.175Z",
-        "revisedAt": "2023-01-15T15:59:06.175Z",
-        "name": "適当"
-      }
-    ]
+    "category": []
   }
 ]
