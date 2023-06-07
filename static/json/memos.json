@@ -1,5 +1,15 @@
 [
   {
+    "id": "hwjhdu-0ne",
+    "createdAt": "2023-06-01T17:17:48.240Z",
+    "updatedAt": "2023-06-07T15:31:08.432Z",
+    "publishedAt": "2023-06-07T15:31:08.432Z",
+    "revisedAt": "2023-06-07T15:31:08.432Z",
+    "title": "Node.jsとDenoの違いについての理解",
+    "content": "<h2 id=\"hd2c91c24e4\">経緯</h2><p>Denoに興味があって触ってみたりしたけれど人に聞かれた時ちゃんとNode.jsに比べて何がいいのかとか説明できないと思ったから<br></p><h2 id=\"h4eade47b9f\">Node.jsとは</h2><blockquote>Node.js はスケーラブルなネットワークアプリケーションを構築するために設計された非同期型のイベント駆動の JavaScript 環境です。</blockquote><p><a href=\"https://nodejs.org/ja/about\" target=\"_blank\" rel=\"noopener noreferrer\">参照</a><br></p><h2 id=\"h7d67d689ce\">Denoとは</h2><blockquote>Denoはデフォルトで安全なJavaScript/TypeScriptのランタイムで素晴らしいデベロッパーエクスペリエンスを提供します。<br>V8、Rust、Tokioを使って作られています。</blockquote><p><a href=\"https://deno-ja.vercel.app/manual\" target=\"_blank\" rel=\"noopener noreferrer\">参照</a><br></p><h2 id=\"h86fc9fb01f\">触ってみて感じるメリット</h2><ol><li>TypeScriptが標準で使えること</li><li>format,lint,testがDenoだけでできる</li><li>npmがない</li></ol><p><br>そのほかにも</p><ul><li>よりセキュアになった</li><li>実行バイナリ1つだけ</li></ul><p>などはあるらしい<br></p><h2 id=\"h3de35099b3\">参考</h2><p>https://deno-ja.vercel.app/manual<br></p>",
+    "category": []
+  },
+  {
     "id": "oz-v5htsqp0r",
     "createdAt": "2023-05-12T12:24:15.588Z",
     "updatedAt": "2023-05-12T12:24:15.588Z",
