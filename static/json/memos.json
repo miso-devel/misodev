@@ -1,5 +1,24 @@
 [
   {
+    "id": "gicpll741x8",
+    "createdAt": "2023-06-07T17:13:19.387Z",
+    "updatedAt": "2023-06-08T08:07:40.835Z",
+    "publishedAt": "2023-06-08T08:07:40.835Z",
+    "revisedAt": "2023-06-08T08:07:40.835Z",
+    "title": "Viteは何をもたらしてる？",
+    "content": "<p>最近viteを使ったwebアプリケーションを作成したので自分の理解をまとめる<br></p><h2 id=\"h4655e4bd52\">viteとは</h2><blockquote>現代の Web プロジェクトのために、より速く無駄のない開発体験を提供することを目的としたビルドツールです</blockquote><p><br></p><h2 id=\"h88590cf3fa\">viteは何を解決しようとして作られたのか</h2><p>大規模なJavaScriptアプリケーションの開発体験をよくするということっぽい。（ざっくり）<br>大規模だと開発サーバーの起動やファイル変更の反映に時間がかかったりして開発体験が悪くなったりする。<br><br></p><h2 id=\"h5441888156\">何を提供するか</h2><blockquote>1. 非常に高速な <a href=\"https://ja.vitejs.dev/guide/features.html#hot-module-replacement\" target=\"_blank\" rel=\"noopener noreferrer\">Hot Module Replacement (HMR)</a> など、<a href=\"https://developer.mozilla.org/ja/docs/Web/JavaScript/Guide/Modules\" target=\"_blank\" rel=\"noopener noreferrer\">ネイティブ ES モジュール</a>を利用した<a href=\"https://ja.vitejs.dev/guide/features.html\" target=\"_blank\" rel=\"noopener noreferrer\">豊富な機能拡張</a>を提供する開発サーバ。</blockquote><ul><li>Hot Module Replacementとは</li></ul><p>Hot Module Replacementはアプリケーションの実行中に、フルリロードすることなくモジュールの交換、追加、削除を行う。この機能によってリロードをしなくてもアプリケーションはHMRランタイムにアップデートのチェックを依頼、依頼を受けたランタイムが非同期でアップデートをダウンロード、アプリケーションに通知、ランタイムが同期的にアップデートを適用という流れで変更を検知する。（Reactとかでリロードしなくてもファイルの変更がブラウザに反映されてるのと同じなのかなとイメージ。）<br><br></p><blockquote>2. <a href=\"https://rollupjs.org\" target=\"_blank\" rel=\"noopener noreferrer\">Rollup</a> でコードをバンドルするビルドコマンド。</blockquote><p>RollupはJSのモジュールバンドラー<br>webpackなどと同じ立ち位置にいる認識。<br></p><h2 id=\"h3de35099b3\">参考</h2><p><a href=\"https://ja.vitejs.dev/guide/\" target=\"_blank\" rel=\"noopener noreferrer\">https://ja.vitejs.dev/guide/</a><br><a href=\"https://webpack.js.org/concepts/hot-module-replacement/\" target=\"_blank\" rel=\"noopener noreferrer\">https://webpack.js.org/concepts/hot-module-replacement/</a><br><a href=\"https://zenn.dev/takiko/articles/827c182638eb3b#webpack%E3%81%A8%E3%81%AF\" target=\"_blank\" rel=\"noopener noreferrer\">https://zenn.dev/takiko/articles/827c182638eb3b#webpack%E3%81%A8%E3%81%AF</a><br><a href=\"https://zenn.dev/uhyo/articles/what-is-native-esm-era\" target=\"_blank\" rel=\"noopener noreferrer\">https://zenn.dev/uhyo/articles/what-is-native-esm-era</a><br><a href=\"https://www.kabuku.co.jp/developers/ultrafast-tsx-build-tool-esbuild\" target=\"_blank\" rel=\"noopener noreferrer\">https://www.kabuku.co.jp/developers/ultrafast-tsx-build-tool-esbuild</a><br><a href=\"https://zenn.dev/sykmhmh/articles/ff09bea2cf7026\" target=\"_blank\" rel=\"noopener noreferrer\">https://zenn.dev/sykmhmh/articles/ff09bea2cf7026</a></p>",
+    "category": [
+      {
+        "id": "9qjm1hpfqf0",
+        "createdAt": "2023-03-11T04:32:16.997Z",
+        "updatedAt": "2023-03-11T04:32:16.997Z",
+        "publishedAt": "2023-03-11T04:32:16.997Z",
+        "revisedAt": "2023-03-11T04:32:16.997Z",
+        "name": "フロントエンド"
+      }
+    ]
+  },
+  {
     "id": "hwjhdu-0ne",
     "createdAt": "2023-06-01T17:17:48.240Z",
     "updatedAt": "2023-06-07T15:45:14.349Z",
