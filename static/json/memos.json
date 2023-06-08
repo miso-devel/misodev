@@ -1,5 +1,24 @@
 [
   {
+    "id": "snuutq83t9y",
+    "createdAt": "2023-06-08T10:32:57.496Z",
+    "updatedAt": "2023-06-08T10:32:57.496Z",
+    "publishedAt": "2023-06-08T10:32:57.496Z",
+    "revisedAt": "2023-06-08T10:32:57.496Z",
+    "title": "フロントエンドのbuildとかbundleって",
+    "content": "<h2 id=\"hd2c91c24e4\">経緯</h2><p>viteについて調べている時にこの辺りあんまりわかってないなーって思ったから<br></p><h2 id=\"hd1d50d45a8\">バンドルとは</h2><p>複数のファイルを1つのファイルにまとめること。<br></p><h3 id=\"h3c778a3709\">なぜ？</h3><p>フロントエンド開発で全ての処理を1つのJSファイルに書くということはなく、複数のファイルに分けて書く。しかしブラウザでJSファイルを読み込む際に全て読み込んでいたらHTTP通信が多くなり非効率。だからバンドルして1つのファイルを読み込むようにする。<br></p><h3 id=\"h4c5565178c\">普段何がそうしてる</h3><p><code>Webpack</code>だったり<code>Rollup</code>とか<br></p><h2 id=\"h5285715dbc\">ビルドとは</h2><p>ビルドされた実行ファイルを実行可能な環境に配置し、実行できるようにする作業<br><code>bundle</code>、<code>transpile</code>、<code>minify</code>の工程を含んでいる。<br></p><h3 id=\"h3c778a3709\">なぜ？</h3><p><code>bundle</code>は上記で述べたようなメリットがある。<br><code>transpile</code>は<code>JavaScript</code>の文法の変化などにブラウザが対応していなくても実行できるようにするために新しい文法を後方互換性のある文法へと書き換える。<br><code>minify</code>はインデントやコメントを取り除いたりしてファイルのサイズを小さくすることによってよりパフォーマンスが上がるようにしている。<br><br></p><h2 id=\"h483fd8efc4\">わかったこと</h2><ul><li><code>JavaScript</code>はブラウザで実行可能な言語なので自なぜビルドする必要があるのかと思ったがビルドの認識が違ったことがわかった。（自分は言語を0とか1に変えるものだと思っていた）</li><li>機械語に変換する工程はブラウザのJavaScriptエンジンが担っている（V8とか）</li></ul><p><br></p><h2 id=\"h3de35099b3\">参考</h2><p><a href=\"https://zenn.dev/antez/articles/58307946cf4f3e\" target=\"_blank\" rel=\"noopener noreferrer\">https://zenn.dev/antez/articles/58307946cf4f3e</a><br><a href=\"https://qiita.com/renbowroad/items/47fd562767e5d1c31b4a\" target=\"_blank\" rel=\"noopener noreferrer\">https://qiita.com/renbowroad/items/47fd562767e5d1c31b4a</a><br><a href=\"https://blog.tyspine.com/why-build-javascript/\" target=\"_blank\" rel=\"noopener noreferrer\">https://blog.tyspine.com/why-build-javascript/</a><br><a href=\"https://ja.javascript.info/intro\" target=\"_blank\" rel=\"noopener noreferrer\">https://ja.javascript.info/intro</a></p>",
+    "category": [
+      {
+        "id": "9qjm1hpfqf0",
+        "createdAt": "2023-03-11T04:32:16.997Z",
+        "updatedAt": "2023-03-11T04:32:16.997Z",
+        "publishedAt": "2023-03-11T04:32:16.997Z",
+        "revisedAt": "2023-03-11T04:32:16.997Z",
+        "name": "フロントエンド"
+      }
+    ]
+  },
+  {
     "id": "gicpll741x8",
     "createdAt": "2023-06-07T17:13:19.387Z",
     "updatedAt": "2023-06-08T08:07:40.835Z",
@@ -133,24 +152,5 @@
     "title": "Preactのcompatについて",
     "content": "<h3 id=\"h2675cbd220\">調べた経緯</h3><p>このサイトを作ってる際に<code>react-particles</code>を使っているが、<code>https://esm.sh/react-particles@2.8.0</code>では正常に使えず、<code>https://esm.sh/v106/react-particles@2.8.0?alias=react:preact/compat&amp;external=preact/compat</code>\tでは使える理由がよく分かってなかった。<br></p><h3 id=\"he4b3b364ec\">調べて分かったこと</h3><ul><li><code>Preact</code>ではReactよりも機能を減らし、最低限の機能を提供しているっぽい。</li><li>その結果、Reactで利用できるライブラリがPreactでは利用できないことがある。この両者の違いを解決する方法として<code>Preact/compat</code>がある。</li><li><code>preact/compat</code>は、React, ReactDOMとの互換性を保つためのレイヤーであり、これを使うとReact、ReactDOM上で動くライブラリ等は動くようになる？</li></ul><p><br></p><h3 id=\"h3de35099b3\">参考</h3><p><a href=\"https://preactjs.com/guide/v10/differences-to-react\" target=\"_blank\" rel=\"noopener noreferrer\">https://preactjs.com/guide/v10/differences-to-react</a><br><a href=\"https://preactjs.com/guide/v10/switching-to-preact/\" target=\"_blank\" rel=\"noopener noreferrer\">https://preactjs.com/guide/v10/switching-to-preact/</a></p>",
     "category": []
-  },
-  {
-    "id": "f5we-9xy61ay",
-    "createdAt": "2023-01-15T16:03:30.944Z",
-    "updatedAt": "2023-06-07T17:39:09.736Z",
-    "publishedAt": "2023-01-15T16:03:30.944Z",
-    "revisedAt": "2023-06-07T17:39:09.736Z",
-    "title": "ポートフォリオサイト作った",
-    "content": "<h3 id=\"hc7260bb88e\">作った経緯</h3><ul><li>DenoのwebフレームワークFreshを使いたかった</li><li>自分のプロダクトとかまとめてなかったので確認するの面倒だった</li></ul><h3 id=\"hd4d34ed888\">技術</h3><ul><li>Deno</li><li>Fresh</li><li>microCMS</li></ul><p><br></p>",
-    "category": [
-      {
-        "id": "aj_4q66hiob6",
-        "createdAt": "2023-01-15T15:59:06.175Z",
-        "updatedAt": "2023-06-07T17:38:48.729Z",
-        "publishedAt": "2023-01-15T15:59:06.175Z",
-        "revisedAt": "2023-06-07T17:38:48.729Z",
-        "name": "趣味"
-      }
-    ]
   }
 ]
