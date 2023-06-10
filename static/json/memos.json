@@ -1,5 +1,62 @@
 [
   {
+    "id": "snuutq83t9y",
+    "createdAt": "2023-06-08T10:32:57.496Z",
+    "updatedAt": "2023-06-10T10:13:25.104Z",
+    "publishedAt": "2023-06-08T10:32:57.496Z",
+    "revisedAt": "2023-06-10T10:13:25.104Z",
+    "title": "フロントエンドのbuildとかbundleって",
+    "content": "<h2 id=\"hd2c91c24e4\">経緯</h2><p>viteについて調べている時にこの辺りあんまりわかってないなーって思ったから<br></p><h2 id=\"hd1d50d45a8\">バンドルとは</h2><p>複数のファイルを1つのファイルにまとめること。<br></p><h3 id=\"h3c778a3709\">なぜ？</h3><p>フロントエンド開発で全ての処理を1つのJSファイルに書くということはなく、複数のファイルに分けて書く。しかしブラウザでJSファイルを読み込む際に全て読み込んでいたらHTTP通信が多くなり非効率。だからバンドルして1つのファイルを読み込むようにする。<br></p><h3 id=\"h4c5565178c\">普段何がそうしてる</h3><p><code>Webpack</code>だったり<code>Rollup</code>とか<br></p><h2 id=\"h5285715dbc\">ビルドとは</h2><p>ビルドされた実行ファイルを実行可能な環境に配置し、実行できるようにする作業<br><code>bundle</code>、<code>transpile</code>、<code>minify</code>の工程を含んでいる。<br></p><h3 id=\"h3c778a3709\">なぜ？</h3><p><code>bundle</code>は上記で述べたようなメリットがある。<br><code>transpile</code>は<code>JavaScript</code>の文法の変化などにブラウザが対応していなくても実行できるようにするために新しい文法を後方互換性のある文法へと書き換える。<br><code>minify</code>はインデントやコメントを取り除いたりしてファイルのサイズを小さくすることによってよりパフォーマンスが上がるようにしている。<br><br></p><h2 id=\"h483fd8efc4\">わかったこと</h2><ul><li><code>JavaScript</code>はブラウザで実行可能な言語なのでなぜビルドする必要があるのかと思ったがビルドの認識が違ったことがわかった。（自分は言語を0とか1に変えるものだと思っていた）</li><li>機械語に変換する工程はブラウザのJavaScriptエンジンが担っている（V8とか）</li></ul><p><br></p><h2 id=\"h3de35099b3\">参考</h2><p><a href=\"https://zenn.dev/antez/articles/58307946cf4f3e\" target=\"_blank\" rel=\"noopener noreferrer\">https://zenn.dev/antez/articles/58307946cf4f3e</a><br><a href=\"https://qiita.com/renbowroad/items/47fd562767e5d1c31b4a\" target=\"_blank\" rel=\"noopener noreferrer\">https://qiita.com/renbowroad/items/47fd562767e5d1c31b4a</a><br><a href=\"https://blog.tyspine.com/why-build-javascript/\" target=\"_blank\" rel=\"noopener noreferrer\">https://blog.tyspine.com/why-build-javascript/</a><br><a href=\"https://ja.javascript.info/intro\" target=\"_blank\" rel=\"noopener noreferrer\">https://ja.javascript.info/intro</a></p>",
+    "category": [
+      {
+        "id": "9qjm1hpfqf0",
+        "createdAt": "2023-03-11T04:32:16.997Z",
+        "updatedAt": "2023-03-11T04:32:16.997Z",
+        "publishedAt": "2023-03-11T04:32:16.997Z",
+        "revisedAt": "2023-03-11T04:32:16.997Z",
+        "name": "フロントエンド"
+      }
+    ]
+  },
+  {
+    "id": "gicpll741x8",
+    "createdAt": "2023-06-07T17:13:19.387Z",
+    "updatedAt": "2023-06-08T08:07:40.835Z",
+    "publishedAt": "2023-06-08T08:07:40.835Z",
+    "revisedAt": "2023-06-08T08:07:40.835Z",
+    "title": "Viteは何をもたらしてる？",
+    "content": "<p>最近viteを使ったwebアプリケーションを作成したので自分の理解をまとめる<br></p><h2 id=\"h4655e4bd52\">viteとは</h2><blockquote>現代の Web プロジェクトのために、より速く無駄のない開発体験を提供することを目的としたビルドツールです</blockquote><p><br></p><h2 id=\"h88590cf3fa\">viteは何を解決しようとして作られたのか</h2><p>大規模なJavaScriptアプリケーションの開発体験をよくするということっぽい。（ざっくり）<br>大規模だと開発サーバーの起動やファイル変更の反映に時間がかかったりして開発体験が悪くなったりする。<br><br></p><h2 id=\"h5441888156\">何を提供するか</h2><blockquote>1. 非常に高速な <a href=\"https://ja.vitejs.dev/guide/features.html#hot-module-replacement\" target=\"_blank\" rel=\"noopener noreferrer\">Hot Module Replacement (HMR)</a> など、<a href=\"https://developer.mozilla.org/ja/docs/Web/JavaScript/Guide/Modules\" target=\"_blank\" rel=\"noopener noreferrer\">ネイティブ ES モジュール</a>を利用した<a href=\"https://ja.vitejs.dev/guide/features.html\" target=\"_blank\" rel=\"noopener noreferrer\">豊富な機能拡張</a>を提供する開発サーバ。</blockquote><ul><li>Hot Module Replacementとは</li></ul><p>Hot Module Replacementはアプリケーションの実行中に、フルリロードすることなくモジュールの交換、追加、削除を行う。この機能によってリロードをしなくてもアプリケーションはHMRランタイムにアップデートのチェックを依頼、依頼を受けたランタイムが非同期でアップデートをダウンロード、アプリケーションに通知、ランタイムが同期的にアップデートを適用という流れで変更を検知する。（Reactとかでリロードしなくてもファイルの変更がブラウザに反映されてるのと同じなのかなとイメージ。）<br><br></p><blockquote>2. <a href=\"https://rollupjs.org\" target=\"_blank\" rel=\"noopener noreferrer\">Rollup</a> でコードをバンドルするビルドコマンド。</blockquote><p>RollupはJSのモジュールバンドラー<br>webpackなどと同じ立ち位置にいる認識。<br></p><h2 id=\"h3de35099b3\">参考</h2><p><a href=\"https://ja.vitejs.dev/guide/\" target=\"_blank\" rel=\"noopener noreferrer\">https://ja.vitejs.dev/guide/</a><br><a href=\"https://webpack.js.org/concepts/hot-module-replacement/\" target=\"_blank\" rel=\"noopener noreferrer\">https://webpack.js.org/concepts/hot-module-replacement/</a><br><a href=\"https://zenn.dev/takiko/articles/827c182638eb3b#webpack%E3%81%A8%E3%81%AF\" target=\"_blank\" rel=\"noopener noreferrer\">https://zenn.dev/takiko/articles/827c182638eb3b#webpack%E3%81%A8%E3%81%AF</a><br><a href=\"https://zenn.dev/uhyo/articles/what-is-native-esm-era\" target=\"_blank\" rel=\"noopener noreferrer\">https://zenn.dev/uhyo/articles/what-is-native-esm-era</a><br><a href=\"https://www.kabuku.co.jp/developers/ultrafast-tsx-build-tool-esbuild\" target=\"_blank\" rel=\"noopener noreferrer\">https://www.kabuku.co.jp/developers/ultrafast-tsx-build-tool-esbuild</a><br><a href=\"https://zenn.dev/sykmhmh/articles/ff09bea2cf7026\" target=\"_blank\" rel=\"noopener noreferrer\">https://zenn.dev/sykmhmh/articles/ff09bea2cf7026</a></p>",
+    "category": [
+      {
+        "id": "9qjm1hpfqf0",
+        "createdAt": "2023-03-11T04:32:16.997Z",
+        "updatedAt": "2023-03-11T04:32:16.997Z",
+        "publishedAt": "2023-03-11T04:32:16.997Z",
+        "revisedAt": "2023-03-11T04:32:16.997Z",
+        "name": "フロントエンド"
+      }
+    ]
+  },
+  {
+    "id": "hwjhdu-0ne",
+    "createdAt": "2023-06-01T17:17:48.240Z",
+    "updatedAt": "2023-06-07T15:45:14.349Z",
+    "publishedAt": "2023-06-07T15:31:08.432Z",
+    "revisedAt": "2023-06-07T15:45:14.349Z",
+    "title": "Denoでいいなって思ったとこ",
+    "content": "<h2 id=\"hd2c91c24e4\">経緯</h2><p>Denoに興味があって触ってみたりしたけれど人に聞かれた時ちゃんとNode.jsに比べて何がいいのかとか説明できないと思ったから<br></p><h2 id=\"h4eade47b9f\">Node.jsとは</h2><blockquote>Node.js はスケーラブルなネットワークアプリケーションを構築するために設計された非同期型のイベント駆動の JavaScript 環境です。</blockquote><p><a href=\"https://nodejs.org/ja/about\" target=\"_blank\" rel=\"noopener noreferrer\">参照</a><br></p><h2 id=\"h7d67d689ce\">Denoとは</h2><blockquote>Denoはデフォルトで安全なJavaScript/TypeScriptのランタイムで素晴らしいデベロッパーエクスペリエンスを提供します。<br>V8、Rust、Tokioを使って作られています。</blockquote><p><a href=\"https://deno-ja.vercel.app/manual\" target=\"_blank\" rel=\"noopener noreferrer\">参照</a><br></p><h2 id=\"h86fc9fb01f\">触ってみて感じるメリット</h2><ol><li>TypeScriptが標準で使えること</li><li>format,lint,testがDenoだけでできる</li><li>npmがない</li></ol><p><br>そのほかにも</p><ul><li>よりセキュアになった</li><li>実行バイナリ1つだけ</li></ul><p>などはあるらしい<br></p><h2 id=\"h3de35099b3\">参考</h2><p>https://deno-ja.vercel.app/manual<br></p>",
+    "category": [
+      {
+        "id": "jqyr0v-tv7",
+        "createdAt": "2023-01-16T13:57:43.345Z",
+        "updatedAt": "2023-01-16T13:57:43.345Z",
+        "publishedAt": "2023-01-16T13:57:43.345Z",
+        "revisedAt": "2023-01-16T13:57:43.345Z",
+        "name": "Deno"
+      }
+    ]
+  },
+  {
     "id": "oz-v5htsqp0r",
     "createdAt": "2023-05-12T12:24:15.588Z",
     "updatedAt": "2023-05-12T12:24:15.588Z",
@@ -60,19 +117,19 @@
   {
     "id": "m3_5gjwr8",
     "createdAt": "2023-02-27T13:38:29.266Z",
-    "updatedAt": "2023-02-27T13:50:03.655Z",
+    "updatedAt": "2023-06-07T17:42:07.084Z",
     "publishedAt": "2023-02-27T13:38:29.266Z",
-    "revisedAt": "2023-02-27T13:50:03.655Z",
+    "revisedAt": "2023-06-07T17:42:07.084Z",
     "title": "今までに見たアニメ",
-    "content": "<ul><li>俺ガイル</li><li>新世界より</li><li>未来日記</li><li>Angel Beats!</li><li>SAO（全部は見てない）</li><li>鬼滅の刃</li><li>魔法科高校の劣等生</li><li>物語シリーズ</li><li>鋼の錬金術師</li><li>このすば</li><li>進撃の巨人</li><li>ぐらんぶる</li><li>食戟のソーマ</li><li>ToLOVEる</li><li>あそびあそばせ</li><li>オーバーロード</li><li>とあるシリーズ</li><li>俺の妹がこんなに可愛いわけがない</li><li>ダーウィンズゲーム</li><li>犬とハサミは使いよう</li><li>うしおととら</li><li>SSSS.GRIDMAN</li><li>SSSS.DYNAZENON</li><li>終わりのセラフ</li><li>ノラガミ</li><li>ギルティクラウン</li><li>Charlotte</li><li>キングダム</li><li>ゴブリンスレイヤー</li><li>金色のガッシュベル</li><li>冴えない彼女の育てかた </li><li>斉木楠雄のψ難</li><li>俺の彼女と幼馴染が修羅場すぎる</li><li>坂本ですが</li><li>ニャル子</li><li>スケットダンス</li><li>ストライク・ザ・ブラッド</li><li>瀬戸の花嫁</li><li>男子高校生の日常</li><li>ダンガンロンパ</li><li>田中くんはいつもけだるげ</li><li>ゴールデンカムイ</li><li>ゲーマーズ</li><li>亜人ちゃんは語りたい</li><li>東京喰種</li><li>のうりん</li><li>はたらく魔王さま</li><li>徒然チルドレン</li><li>デート・ア・ライブ</li><li>トリニティセブン</li><li>NARUTO</li><li>フェアリーテール</li><li>ダンまち</li><li>ハンターハンター</li><li>はんだくん</li><li>バカとテストと召喚獣</li><li>刃牙</li><li>ブラック・ブレット</li><li>ペルソナ5</li><li>僕は友達が少ない</li><li>僕だけがいない街</li><li>マギ</li><li>魔法使いの嫁</li><li>無際限のファントムワールド</li><li>モブサイコ</li><li>山田くんと七人の魔女</li><li>リゼロ</li><li>りゅうおうのおしごと</li><li>ろくでなし魔術講師と禁忌教育典</li><li>ワンパンマン</li><li>WORKING</li><li>Dr.STONE</li><li>魔王城でおやすみ</li><li>よう実</li><li>ドラゴンボール</li><li>サマータイムレンダ</li><li>黒子のバスケ</li><li>スラムダンク</li><li>デスノート</li><li>転生したらスライムだった件</li><li>呪術廻戦</li><li>エヴァンゲリオン</li><li>幽遊白書</li><li>コードギアス叛逆のルルーシュ</li><li>銀魂</li><li>異世界おじさん</li><li>どろろ</li><li>ドロヘドロ</li><li>亜人</li><li>ヨルムンガンド</li><li>ブラックラグーン</li><li>ぼっちざろっく</li><li>中二病でも恋がしたい</li><li>氷菓</li><li>甘城ブリリアントパーク</li><li>夏目友人帳</li><li>青春ブタ野郎はバニーガール先輩の夢を見ない</li><li>僕のヒーローアカデミア</li><li>暗殺教室</li><li>86</li><li>七つの大罪</li><li>賭ケグルイ</li><li>デュラララ</li><li>境界の彼方</li><li>灰と幻想のグリムガル</li><li>日常</li><li>女子高生の無駄づかい</li><li>荒川アンダーザブリッジ</li><li>魔法使いの嫁</li><li>チェンソーマン</li><li>ジョジョシリーズ</li></ul><p><br>多分まだある</p>",
+    "content": "<ul><li>俺ガイル</li><li>新世界より</li><li>未来日記</li><li>Angel Beats!</li><li>SAO（全部は見てない）</li><li>鬼滅の刃</li><li>魔法科高校の劣等生</li><li>物語シリーズ</li><li>鋼の錬金術師</li><li>このすば</li><li>進撃の巨人</li><li>ぐらんぶる</li><li>食戟のソーマ</li><li>ToLOVEる</li><li>あそびあそばせ</li><li>オーバーロード</li><li>とあるシリーズ</li><li>俺の妹がこんなに可愛いわけがない</li><li>ダーウィンズゲーム</li><li>犬とハサミは使いよう</li><li>うしおととら</li><li>SSSS.GRIDMAN</li><li>SSSS.DYNAZENON</li><li>終わりのセラフ</li><li>ノラガミ</li><li>ギルティクラウン</li><li>Charlotte</li><li>キングダム</li><li>ゴブリンスレイヤー</li><li>金色のガッシュベル</li><li>冴えない彼女の育てかた </li><li>斉木楠雄のψ難</li><li>俺の彼女と幼馴染が修羅場すぎる</li><li>坂本ですが</li><li>ニャル子</li><li>スケットダンス</li><li>ストライク・ザ・ブラッド</li><li>瀬戸の花嫁</li><li>男子高校生の日常</li><li>ダンガンロンパ</li><li>田中くんはいつもけだるげ</li><li>ゴールデンカムイ</li><li>ゲーマーズ</li><li>亜人ちゃんは語りたい</li><li>東京喰種</li><li>のうりん</li><li>はたらく魔王さま</li><li>徒然チルドレン</li><li>デート・ア・ライブ</li><li>トリニティセブン</li><li>NARUTO</li><li>フェアリーテール</li><li>ダンまち</li><li>ハンターハンター</li><li>はんだくん</li><li>バカとテストと召喚獣</li><li>刃牙</li><li>ブラック・ブレット</li><li>ペルソナ5</li><li>僕は友達が少ない</li><li>僕だけがいない街</li><li>マギ</li><li>魔法使いの嫁</li><li>無際限のファントムワールド</li><li>モブサイコ</li><li>山田くんと七人の魔女</li><li>リゼロ</li><li>りゅうおうのおしごと</li><li>ろくでなし魔術講師と禁忌教育典</li><li>ワンパンマン</li><li>WORKING</li><li>Dr.STONE</li><li>魔王城でおやすみ</li><li>よう実</li><li>ドラゴンボール</li><li>サマータイムレンダ</li><li>黒子のバスケ</li><li>スラムダンク</li><li>デスノート</li><li>転生したらスライムだった件</li><li>呪術廻戦</li><li>エヴァンゲリオン</li><li>幽遊白書</li><li>コードギアス叛逆のルルーシュ</li><li>銀魂</li><li>異世界おじさん</li><li>どろろ</li><li>ドロヘドロ</li><li>亜人</li><li>ヨルムンガンド</li><li>ブラックラグーン</li><li>ぼっちざろっく</li><li>中二病でも恋がしたい</li><li>氷菓</li><li>甘城ブリリアントパーク</li><li>夏目友人帳</li><li>青春ブタ野郎はバニーガール先輩の夢を見ない</li><li>僕のヒーローアカデミア</li><li>暗殺教室</li><li>86</li><li>七つの大罪</li><li>賭ケグルイ</li><li>デュラララ</li><li>境界の彼方</li><li>灰と幻想のグリムガル</li><li>日常</li><li>女子高生の無駄づかい</li><li>荒川アンダーザブリッジ</li><li>魔法使いの嫁</li><li>チェンソーマン</li><li>ジョジョシリーズ</li><li>キルラキル</li><li>マッシュル-MASHLE-</li></ul><p><br>多分まだある</p>",
     "category": [
       {
         "id": "aj_4q66hiob6",
         "createdAt": "2023-01-15T15:59:06.175Z",
-        "updatedAt": "2023-01-15T15:59:06.175Z",
+        "updatedAt": "2023-06-07T17:38:48.729Z",
         "publishedAt": "2023-01-15T15:59:06.175Z",
-        "revisedAt": "2023-01-15T15:59:06.175Z",
-        "name": "適当"
+        "revisedAt": "2023-06-07T17:38:48.729Z",
+        "name": "趣味"
       }
     ]
   },
@@ -95,24 +152,5 @@
     "title": "Preactのcompatについて",
     "content": "<h3 id=\"h2675cbd220\">調べた経緯</h3><p>このサイトを作ってる際に<code>react-particles</code>を使っているが、<code>https://esm.sh/react-particles@2.8.0</code>では正常に使えず、<code>https://esm.sh/v106/react-particles@2.8.0?alias=react:preact/compat&amp;external=preact/compat</code>\tでは使える理由がよく分かってなかった。<br></p><h3 id=\"he4b3b364ec\">調べて分かったこと</h3><ul><li><code>Preact</code>ではReactよりも機能を減らし、最低限の機能を提供しているっぽい。</li><li>その結果、Reactで利用できるライブラリがPreactでは利用できないことがある。この両者の違いを解決する方法として<code>Preact/compat</code>がある。</li><li><code>preact/compat</code>は、React, ReactDOMとの互換性を保つためのレイヤーであり、これを使うとReact、ReactDOM上で動くライブラリ等は動くようになる？</li></ul><p><br></p><h3 id=\"h3de35099b3\">参考</h3><p><a href=\"https://preactjs.com/guide/v10/differences-to-react\" target=\"_blank\" rel=\"noopener noreferrer\">https://preactjs.com/guide/v10/differences-to-react</a><br><a href=\"https://preactjs.com/guide/v10/switching-to-preact/\" target=\"_blank\" rel=\"noopener noreferrer\">https://preactjs.com/guide/v10/switching-to-preact/</a></p>",
     "category": []
-  },
-  {
-    "id": "f5we-9xy61ay",
-    "createdAt": "2023-01-15T16:03:30.944Z",
-    "updatedAt": "2023-02-05T11:00:51.897Z",
-    "publishedAt": "2023-01-15T16:03:30.944Z",
-    "revisedAt": "2023-02-05T11:00:51.897Z",
-    "title": "ポートフォリオサイト作った",
-    "content": "<h3 id=\"hc7260bb88e\">作った経緯</h3><ul><li>DenoのwebフレームワークFreshを使いたかった</li><li>自分のプロダクトとかまとめてなかったので確認するの面倒だった</li></ul><h3 id=\"hd4d34ed888\">技術</h3><ul><li>Deno</li><li>Fresh</li><li>microCMS</li></ul><p><br></p>",
-    "category": [
-      {
-        "id": "aj_4q66hiob6",
-        "createdAt": "2023-01-15T15:59:06.175Z",
-        "updatedAt": "2023-01-15T15:59:06.175Z",
-        "publishedAt": "2023-01-15T15:59:06.175Z",
-        "revisedAt": "2023-01-15T15:59:06.175Z",
-        "name": "適当"
-      }
-    ]
   }
 ]
