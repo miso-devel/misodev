@@ -1,8 +1,8 @@
 {
   "imports": {
     "$fresh/": "https://deno.land/x/fresh@1.1.6/",
-    "fs": "https://deno.land/std/fs/mod.ts",
-    "path": "https://deno.land/std/path/mod.ts",
+    "fs": "https://deno.land/std@0.175.0/fs/mod.ts",
+    "path": "https://deno.land/std@0.175.0/path/mod.ts",
     "preact": "https://esm.sh/preact@10.13.1",
     "preact/": "https://esm.sh/preact@10.13.1/",
     "preact-render-to-string": "https://esm.sh/*preact-render-to-string@5.2.6",
@@ -11,7 +11,7 @@
     "twind": "https://esm.sh/twind@0.16.19",
     "twind/": "https://esm.sh/twind@0.16.19/",
     "dotenv/": "https://deno.land/std@0.172.0/dotenv/",
-    "microcms": "https://esm.sh/microcms-js-sdk@2.0.0",
+    "microcms": "https://esm.sh/microcms-js-sdk@2.5.0",
     "dompurify": "https://esm.sh/dompurify@2.3.8",
     "tsparticles-engine": "https://esm.sh/v106/tsparticles-engine@2.8.0",
     "tsparticles": "https://esm.sh/v106/tsparticles@2.8.0",

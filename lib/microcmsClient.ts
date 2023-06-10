@@ -1,5 +1,5 @@
-import { createClient } from 'microcms';
+import { createClient } from "microcms";
 export const microcmsClient = createClient({
-  serviceDomain: 'misodev',
+  serviceDomain: "misodev",
   apiKey: `${Deno.args[0]}`,
 });
